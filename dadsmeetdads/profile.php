@@ -182,24 +182,25 @@ if (isset($_POST['btnAddDad'])) {
             <div id='profilePic'>
                 <img src='../dadsmeetdads/images/<?php print $ProfilePic ?>' style ='max-width:200px;max-height: 200px;margin:auto; border: solid medium #00c9ec;' alt=''>
             </div>
+            
             <h1 class='Profile' >Profile of <?php print $firstName . " " . $lastName ?></h1>
-            <br>
+         
 
             <?php
             if ($friend == true) {
-                print "<form method='post' action='" . $phpSelf . "?user=" . $_GET['user'] . "' ><input type='hidden' name='user' value='" . $_GET['user'] . "'><input type='submit' value='Add this Dad' name='btnAddDad' id='btnAddDad' class='btnDad'></form>";
-            } elseif (!isset($_GET['user'])) {
+                print "<form method='post' action='" . $phpSelf . "?user=" . $_GET['user'] . "''><input type='hidden' name='user' value='" . $_GET['user'] . "'><input type='submit' value='Add this Dad' name='btnAddDad' id='btnAddDad' class='btnDad'></form>";
+            } elseif (!isset($_GET['user']) OR ($_GET['user'] == $_SESSION['userName'])) {
                 print '';
             } else {
                 if (isset($_POST['btnAddDad'])) {
                     print 'You have successfully added this dad!';
                 }
-                if (!isset($_GET['user'])) {
-                    print "<div><form method='post' action='" . $phpSelf . "?user=" . $_GET['user'] . "' ><input type='hidden' name='user' value='" . $_GET['user'] . "'><textarea name='txtPost' style='width:400px;float:right;height:100px;'></textarea><br><input type='submit' value='Post Message' name='btnPost' id='btnPost'style='margin-left: 250px;' class='btnDad'></form></div>";
+                if (isset($_GET['user'])) {
+                    print "<div><form method='post' action='" . $phpSelf . "?user=" . $_GET['user'] . "'><input type='hidden' name='user' value='" . $_GET['user'] . "'><textarea name='txtPost' style='width:390px;float:right;height:100px;'></textarea><br><input type='submit' value='Post Message' name='btnPost' id='btnPost' style='margin:0;margin-left:240px;' class='btnDad'></form></div>";
                 }
             }
             ?>
-
+            
         </div>
         
         <ol style="height: 20px;">

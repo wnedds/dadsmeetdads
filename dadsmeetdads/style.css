@@ -17,6 +17,9 @@ body {
     margin: 0;
 }
 
+header {
+    height: 60px;
+}
 
 option {
     color: black;
@@ -44,7 +47,7 @@ nav ol {
 
 nav ol li {
 
-
+    font-size:1.3em;
     background-color: #fff;
     float: right;
     list-style-type: none;
@@ -298,6 +301,8 @@ input {
     width: 180px;
     border: 1px solid #709fcf;
     padding: 0;
+    text-align: center;
+    background-color: #66DFF4;
 }
 
 .activetab {
@@ -308,4 +313,16 @@ input {
     border: 1px solid #709fcf;
     border-bottom: none;
     padding: 0;
+    text-align: center;
+    background-color: #66DFF4;
+}
+
+.tab a {
+    color: black;
+    text-decoration: none;
+}
+
+.activetab a {
+    color: black;
+    text-decoration: none;
 }
