@@ -35,9 +35,9 @@
                 }
 
                 if (basename($_SERVER['PHP_SELF']) == "profile.php") {
-                    print '     <li class="activepage">Home</li>';
+                    print '     <li class="activepage">Profile</li>';
                 } else {
-                    print '     <li class="selection"><a href="profile.php">Home</a></li>
+                    print '     <li class="selection"><a href="profile.php">Profile</a></li>
             ';
                 }
             }
