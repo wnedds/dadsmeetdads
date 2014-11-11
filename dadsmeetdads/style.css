@@ -251,7 +251,7 @@ input {
 
 .friends li {
     margin: auto;
-    border: 1px solid #709fcf;
+    //border: 1px solid #709fcf;
 }
 
 .friends li a {
@@ -289,4 +289,23 @@ input {
     margin: 5px;
     float: left;
     padding: 5px;
+}
+
+.tab {
+    //margin: 3px;
+    float: left;
+    display: block;
+    width: 180px;
+    border: 1px solid #709fcf;
+    padding: 0;
+}
+
+.activetab {
+    //margin: 3px;
+    float: left;
+    display: block;
+    width: 180px;
+    border: 1px solid #709fcf;
+    border-bottom: none;
+    padding: 0;
 }

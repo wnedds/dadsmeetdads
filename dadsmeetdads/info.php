@@ -105,8 +105,3 @@
         <br>
         <br>
         <p>Email: <?php print " " . $email;?></p>
-    </section>
-
-
-</div>
-

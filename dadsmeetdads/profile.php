@@ -23,7 +23,7 @@ foreach ($numFriends as $oneFriends) {
 }
 
 //print "the user is ".$_GET['user'];
-if (!isset($_GET['user'])) {
+if (!isset($_GET['user']) OR ($_GET['user'] == $_SESSION['userName'])) {
     $friend = false;
 }
 if (isset($_POST['btnAddDad'])) {
@@ -38,7 +38,7 @@ if (isset($_GET['user'])) {
 }
 
 if (isset($_GET['btnSearch'])) {
-    header('Location: search.php?search=' . $$_GET['txtSearch'] . '');
+    header('Location: search.php?search=' . $_GET['txtSearch'] . '');
 }
 
 //Counts how many users are in the database
@@ -201,14 +201,42 @@ if (isset($_POST['btnAddDad'])) {
             ?>
 
         </div>
+        
+        <ol style="height: 20px;">
+<?php
+        if (($_GET['tab'] == 'feed') OR (!isset($_GET['tab']))) {
+                    print '     <li class="activetab">Post Feed</li>';
+                } else {
+                    print '     <li class="tab"><a href="profile.php?user='.$userName.'&tab=feed">Post Feed</a></li>';
+                }
+                if ($_GET['tab'] == 'info') {
+                    print '     <li class="activetab">DadFacts</li>';
+                } else {
+                    print '     <li class="tab"><a href="profile.php?user='.$userName.'&tab=info">DadFacts</a></li>';
+                }
+                if ($_GET['tab'] == 'friends') {
+                    print '     <li class="activetab">Pals</li>';
+                } else {
+                    print '     <li class="tab"><a href="profile.php?user='.$userName.'&tab=friends">Pals</a></li>';
+                }
+            
+            ?>
+        </ol>
+ 
+        <?php
+        if (($_GET['tab'] == 'feed') OR (!isset($_GET['tab']))) {
+            include 'feed.php';
+        } elseif ($_GET['tab'] == 'info') {
+            include 'info.php';
+        } elseif ($_GET['tab'] == 'friends') {
+            include 'friends.php';
+        }
+
+        ?> 
+
+            </section>
 
 
-<?php 
-
-
-
-include 'info.php';
-
-
-include 'footer.php' ?>
+</div>
+<?php include 'footer.php' ?>
 
