@@ -11,15 +11,17 @@
 <?php
 include 'top.php';
 
-if (isset($_GET['block'])) {
-    print '<p style="text-align:center;color:red;padding:20px;background-color:white">Sorry, dad, but only administrators can use this function at this time.</p>';
-}
 
 $debug = false;
 $friend = true;
+
 $query = "SELECT fnkSubjectDad, fnkTargetDad,fldTargetFirst,fldTargetLast,fldTargetPic FROM tblFriends WHERE fnkTargetDad LIKE '" . $_GET['user'] . "' AND fnkSubjectDad LIKE '" . $_SESSION['userName'] . "'";
 $numFriends = $thisDatabase->select($query);
 //print_r($numFriends);
+
+if (isset($_GET['block'])) {
+    print '<p style="text-align:center;color:red;padding:20px;background-color:white">Sorry, dad, but only administrators can use this function at this time.</p>';
+}
 
 foreach ($numFriends as $oneFriends) {
     if ($_GET['user'] == $oneFriends['fnkTargetDad']) {
@@ -46,26 +48,15 @@ if (isset($_GET['btnSearch'])) {
     header('Location: search.php?search=' . $_GET['txtSearch'] . '');
 }
 
-//Counts how many users are in the database
-$query = "SELECT COUNT(pmkUserId) FROM tblUsers";
-$numDad = $thisDatabase->select($query);
 
-//Counts how many users are in the database
-$query = "SELECT fldFirstName, fldLastName, fldUserName,fldPicName FROM tblUsers ORDER BY RAND()";
+$query = "SELECT fldFirstName, fldLastName, fldUserName,fldPicName FROM tblUsers WHERE fldUserName NOT LIKE '".$_SESSION['userName']."' ORDER BY RAND()";
 $randDad = $thisDatabase->select($query);
 //print_r($randDad);
 //Selects some random friends of the user whose profile is being shown
 
-if (isset($_GET['user'])) {
-    $query = "SELECT fnkTargetDad, fldTargetFirst,fldTargetLast,fldTargetPic FROM tblFriends WHERE fnkSubjectDad LIKE '" . $_GET['user'] . "' ORDER BY RAND()";
+    $query = "SELECT fnkTargetDad, fldTargetFirst,fldTargetLast,fldTargetPic FROM tblFriends WHERE fnkSubjectDad LIKE '" . $userName . "' ORDER BY RAND()";
 //print $query;
     $friends = $thisDatabase->select($query);
-} else {
-    $query = "SELECT fnkTargetDad, fldTargetFirst,fldTargetLast,fldTargetPic FROM tblFriends WHERE fnkSubjectDad LIKE '" . $_SESSION['userName'] . "' ORDER BY RAND()";
-//print $query;
-    $friends = $thisDatabase->select($query);
-}
-
 
 
 //Pulls the user's likes from the database
@@ -101,8 +92,6 @@ $adjective = 'cool';
 
 if (isset($_POST['btnAddDad'])) {
 
-    
-
     $data = array($_SESSION['userName'], $_GET['user'], $firstName, $lastName, $ProfilePic);
     $query = 'DELETE FROM tblFriends WHERE fnkSubjectDad LIKE "' . $data[0] . '" AND fnkTargetDad LIKE "' . $data[1] . '"';
     //print $query;
@@ -113,45 +102,21 @@ if (isset($_POST['btnAddDad'])) {
 }
 
 if (isset($_POST['btnPost'])) {
-    
+
     $post = htmlentities($_POST['txtPost'], ENT_QUOTES, "UTF-8");
-    
-    $data = array($_SESSION['userName'], $_GET['user'], $_SESSION['firstName'], $_SESSION['lastName'], $_SESSION['profilePic'], $post);
-    //$query = 'DELETE FROM tblPosts WHERE fnkSubjectDad LIKE "' . $data[0] . '" AND fnkTargetDad LIKE "' . $data[1] . '"';
-    //print $query;
-    //$results = $thisDatabase->delete($query);
-    $query = 'INSERT INTO tblPosts(fnkSubjectDad,fnkTargetDad,fldSubjectFirst,fldSubjectLast,fldSubjectPic,fldPostText) VALUES("' . $data[0] . '","' . $data[1] . '","' . $data[2] . '","' . $data[3] . '","' . $data [4] . '","' . $data [5] . '")';
-    //print $query;
-    $results = $thisDatabase->insert($query);
+    if ($post == '') {
+        print '<p style="text-align:center;color:red;padding:20px;background-color:white">You need to write something first!</p>';
+    } else {
+        $data = array($_SESSION['userName'], $_GET['user'], $_SESSION['firstName'], $_SESSION['lastName'], $_SESSION['profilePic'], $post);
+        //$query = 'DELETE FROM tblPosts WHERE fnkSubjectDad LIKE "' . $data[0] . '" AND fnkTargetDad LIKE "' . $data[1] . '"';
+        //print $query;
+        //$results = $thisDatabase->delete($query);
+        $query = 'INSERT INTO tblPosts(fnkSubjectDad,fnkTargetDad,fldSubjectFirst,fldSubjectLast,fldSubjectPic,fldPostText) VALUES("' . $data[0] . '","' . $data[1] . '","' . $data[2] . '","' . $data[3] . '","' . $data [4] . '","' . $data [5] . '")';
+        //print $query;
+        $results = $thisDatabase->insert($query);
+    }
 }
 
-/*
-  //$query = "SELECT fldUserName, fldFirstName, fldLastName FROM tblUsers WHERE fldUserName LIKE '".[STUFFHERE]."'";
-  //$dads = $thisDatabase->select($query);
-  //Legacy code that will be removed
-  $dadProfile1 = array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31");
-  $dadPic1 = array_rand($dadProfile1);
-  $dadFirst1 = array("John", "Mark", "Tom", "Gary", "Neil", "Ben", " Bob", "Bill", "Ken", "Steve", "Joe", "Mike", "Rick", "Rich", "Eric", "Tim", "Chris", "David", "Owen", "Al", "Sam");
-  $dadFirstName1 = array_rand($dadFirst1);
-  $dadLast1 = array("Johnson", "Jackson", "Thompson", "Smith", "Neilson", "Baker", "Adams", "Gunn", "Bradford", "Mejia", "Reeves", "Brody", "Hurley", "Anderson", "Flanders", "Cooper", "Reynolds", "West", "Hoffman", "Brown", "Miller", "Wilson", "Taylor", "Davis", "Young");
-  $dadLastName1 = array_rand($dadLast1);
-
-
-  $dadProfile2 = array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31");
-  $dadPic2 = array_rand($dadProfile2);
-  $dadFirst2 = array("John", "Mark", "Tom", "Gary", "Neil", "Ben", " Bob", "Bill", "Ken", "Steve", "Joe", "Mike", "Rick", "Rich", "Eric", "Tim", "Chris", "David", "Owen", "Al", "Sam");
-  $dadFirstName2 = array_rand($dadFirst2);
-  $dadLast2 = array("Johnson", "Jackson", "Thompson", "Smith", "Neilson", "Baker", "Adams", "Gunn", "Bradford", "Mejia", "Reeves", "Brody", "Hurley", "Anderson", "Flanders", "Cooper", "Reynolds", "West", "Hoffman", "Brown", "Miller", "Wilson", "Taylor", "Davis", "Young");
-  $dadLastName2 = array_rand($dadLast2);
-
-
-  $dadProfile3 = array("1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31");
-  $dadPic3 = array_rand($dadProfile3);
-  $dadFirst3 = array("John", "Mark", "Tom", "Gary", "Neil", "Ben", " Bob", "Bill", "Ken", "Steve", "Joe", "Mike", "Rick", "Rich", "Eric", "Tim", "Chris", "David", "Owen", "Al", "Sam");
-  $dadFirstName3 = array_rand($dadFirst3);
-  $dadLast3 = array("Johnson", "Jackson", "Thompson", "Smith", "Neilson", "Baker", "Adams", "Gunn", "Bradford", "Mejia", "Reeves", "Brody", "Hurley", "Anderson", "Flanders", "Cooper", "Reynolds", "West", "Hoffman", "Brown", "Miller", "Wilson", "Taylor", "Davis", "Young");
-  $dadLastName3 = array_rand($dadLast3);
- * */
 ?>
 
 <div id="wrapper">
@@ -178,7 +143,7 @@ if (isset($_POST['btnPost'])) {
                     }
                     ?>
                 </div>
-                
+
             </li>
             <li>
                 <div>
@@ -203,58 +168,54 @@ if (isset($_POST['btnPost'])) {
             <div id='profilePic'>
                 <img src='../dadsmeetdads/images/<?php print $ProfilePic ?>' style ='max-width:200px;max-height: 200px;margin:auto; border: solid medium #00c9ec;' alt=''>
             </div>
-            
+
             <h1 class='Profile' >Profile of <?php print $firstName . " " . $lastName ?></h1>
-         
+
 
             <?php
-            
             if ($friend == true) {
                 print "<form method='post' action='" . $phpSelf . "?user=" . $_GET['user'] . "''><input type='hidden' name='user' value='" . $_GET['user'] . "'><input type='submit' value='Add this Dad' name='btnAddDad' id='btnAddDad' class='btnDad'></form>";
-
             } else {
                 if (isset($_POST['btnAddDad'])) {
                     print 'You have successfully added this dad!';
-                }
-                {
+                } {
                     print "<div><form method='post' action='" . $phpSelf . "?user=" . $userName . "'><input type='hidden' name='user' value='" . $_GET['user'] . "'><textarea name='txtPost' style='width:390px;float:right;height:100px;'></textarea><br><input type='submit' value='Post Message' name='btnPost' id='btnPost' style='margin:0;margin-left:240px;margin-top:15px;' class='btnDad'></form></div>";
                 }
             }
             ?>
-            
+
         </div>
- <?php       
-        print '<ol style="height: 40px;padding:0;margin-bottom:20px;">';
+            <?php
+            print '<ol style="height: 40px;padding:0;margin-bottom:20px;">';
 
-        if (($_GET['tab'] == 'feed') OR (!isset($_GET['tab']))) {
-                    print '     <li class="activetab">Post Feed</li>';
-                } else {
-                    print '     <li class="tab"><a href="profile.php?user='.$userName.'&tab=feed"><p>Post Feed</p></a></li>';
-                }
-                if ($_GET['tab'] == 'info') {
-                    print '     <li class="activetab">DadFacts</li>';
-                } else {
-                    print '     <li class="tab"><a href="profile.php?user='.$userName.'&tab=info"><p>DadFacts</p></a></li>';
-                }
-                if ($_GET['tab'] == 'friends') {
-                    print '     <li class="activetab">Pals</li>';
-                } else {
-                    print '     <li class="tab"><a href="profile.php?user='.$userName.'&tab=friends"><p>Pals</p></a></li>';
-                }
-            
-            
-        print '</ol>';
- 
-        if (($_GET['tab'] == 'feed') OR (!isset($_GET['tab']))) {
-            include 'feed.php';
-        } elseif ($_GET['tab'] == 'info') {
-            include 'info.php';
-        } elseif ($_GET['tab'] == 'friends') {
-            include 'friends.php';
-        }
+            if (($_GET['tab'] == 'feed') OR (!isset($_GET['tab']))) {
+                print '     <li class="activetab">Post Feed</li>';
+            } else {
+                print '     <li class="tab"><a href="profile.php?user=' . $userName . '&tab=feed"><p>Post Feed</p></a></li>';
+            }
+            if ($_GET['tab'] == 'info') {
+                print '     <li class="activetab">DadFacts</li>';
+            } else {
+                print '     <li class="tab"><a href="profile.php?user=' . $userName . '&tab=info"><p>DadFacts</p></a></li>';
+            }
+            if ($_GET['tab'] == 'friends') {
+                print '     <li class="activetab">Pals</li>';
+            } else {
+                print '     <li class="tab"><a href="profile.php?user=' . $userName . '&tab=friends"><p>Pals</p></a></li>';
+            }
 
-        ?> 
-            </section>
+
+            print '</ol>';
+
+            if (($_GET['tab'] == 'feed') OR (!isset($_GET['tab']))) {
+                include 'feed.php';
+            } elseif ($_GET['tab'] == 'info') {
+                include 'info.php';
+            } elseif ($_GET['tab'] == 'friends') {
+                include 'friends.php';
+            }
+            ?> 
+    </section>
 
 
 </div>

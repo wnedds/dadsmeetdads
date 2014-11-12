@@ -8,6 +8,9 @@ $password = '';
 $query = "SELECT fldConfirmed FROM tblUsers WHERE fldUserName LIKE '" . $_POST['txtUserNameInput'] . "'";
 
 $numDad = $thisDatabase->select($query);
+
+
+
 if (isset($_POST['btnLogin'])) {
     if ($numDad[0]['fldConfirmed'] == 1) {
     
@@ -35,7 +38,7 @@ if (isset($_POST['btnLogin'])) {
 
     
 
-} else {
+} elseif ($numDad[0]['fldConfirmed'] != 1) {
     print '<p style="text-align:center;color:red;padding:20px;background-color:white">Sorry, dad, but you need to confirm your email before you can use Dads Meet Dads.</p>';
     include 'home.php';
 
@@ -46,7 +49,9 @@ if (isset($_POST['btnLogin'])) {
     include 'home.php';
 }
 
-
+if (isset($_SESSION['userName'])) {
+    header("Location: profile.php");
+}
 
 
 include 'footer.php';

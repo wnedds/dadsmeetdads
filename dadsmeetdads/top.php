@@ -16,7 +16,7 @@ session_start();
         <![endif]-->
         <script src='jquery.js'></script>
         <link rel="stylesheet" href="style.css" type="text/css" media="screen">
-
+        <link rel="icon" href="dadsicon.ico">
         <?php
         $debug = false;
 //ini_set('display_errors',1);  error_reporting(E_ALL);

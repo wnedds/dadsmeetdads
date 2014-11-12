@@ -247,7 +247,7 @@ if (isset($_POST["btnSubmit"])) {
         } //ends if data was entered
     } // ends form is valid
 } // ends if form was submitted. We will be adding more information ABOVE this        
-print "<article>";
+print "<article style='padding:30px'>";
 
 
 
@@ -290,61 +290,61 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
           id="frmRegister"
           enctype="multipart/form-data" >
 
-        <fieldset class="quizInput" style="width:'400'">
+        <fieldset>
             <legend>Add a new password</legend>
-            <label for="txtPassword" class="required">Password:</label>
+            <label for="txtPassword" class="required">Password: 
             <input type="password" id="txtPassword" name="txtPassword" value="" tabindex="255" class="option"
-                   maxlength="16" onfocus="this.select()" placeholder="Password here" style="width: 10em;"><br>
+                   maxlength="16" onfocus="this.select()" placeholder="Password here" style="width: 10em;"></label><br>
         </fieldset>
         <br>    
-        <fieldset class="quizInput" style="width:'400'">
+        <fieldset>
             <legend>Confirm your password</legend>
-            <label for="txtPassword2" class="required">Password:</label>
+            <label for="txtPassword2" class="required">Password: 
             <input type="password" id="txtPassword2" name="txtPassword2" value="" tabindex="255" class="option"
-                   maxlength="16" onfocus="this.select()" placeholder="Password here" style="width: 10em;"><br>
+                   maxlength="16" onfocus="this.select()" placeholder="Password here" style="width: 10em;"></label><br>
         </fieldset>
         <br>  
 
-        <fieldset class="quizInput" style="width:'400'">
+        <fieldset>
             <legend>Change your first name:</legend>
-            <label for="txtFirstName" class="required">First Name:</label>
+            <label for="txtFirstName" class="required">First Name: 
             <input type="text" id="txtFirstName" name="txtFirstName" value="<?php print $firstName; ?>" tabindex="260" class="option"
-                   maxlength="12" onfocus="this.select()" placeholder="First Name here" style="width: 10em;"><br>
+                   maxlength="12" onfocus="this.select()" placeholder="First Name here" style="width: 10em;"></label><br>
         </fieldset>
         <br>
 
-        <fieldset class="quizInput" style="width:'400'">
+        <fieldset>
             <legend>Change your last name:</legend>
-            <label for="txtLastName" class="required">Last Name:</label>
+            <label for="txtLastName" class="required">Last Name: 
             <input type="text" id="txtLastName" name="txtLastName" value="<?php echo $lastName; ?>" tabindex="261" class="option"
-                   maxlength="12" onfocus="this.select()" placeholder="Last Name here" style="width: 10em;"><br>
+                   maxlength="12" onfocus="this.select()" placeholder="Last Name here" style="width: 10em;"></label><br>
         </fieldset>
         <br>
-        <fieldset class="quizInput" style="width:'400'">
-            <legend>What gender dad are you?</legend>
+        <fieldset>
+            <legend class="required">What gender dad are you?</legend>
             <label><input type="radio" class="option" id="radDadYoung" name="radGender" <?php if ($gender == "boy") echo ' checked="checked" '; ?> value="boy">Boy Dad</label><br>
             <label><input type="radio"  class="option" id="radDadMed" name="radGender" <?php if ($gender == "girl") echo ' checked="checked" '; ?> value="girl">Girl Dad</label><br>
             <label><input type="radio"  class="option" id="radDadOld" name="radGender" <?php if ($gender == "other") echo ' checked="checked" '; ?> value="other">Outside-The-Gender-Binary Dad</label><br>
 
         </fieldset>
         <br>
-        <fieldset class="quizInput" style="width:'400'">
-            <legend>What activities do you enjoy?</legend>
-            <label><input type="checkbox" id="chkHiking" name="chkHiking" <?php if ($hiking == true) echo 'checked="checked"'; ?> value="Hiking"  class="option" tabindex="221" > Hiking</label><br>
-            <label><input type="checkbox" id="chkSailing" name="chkSailing" <?php if ($sailing == true) echo 'checked="checked"'; ?> value="Sailing" class="option" tabindex="222" > Sailing</label><br>
-            <label><input type="checkbox" id="chkGrilling" name="chkGrilling" <?php if ($grilling == true) echo 'checked="checked"'; ?> value="Grilling" class="option" tabindex="223" > Grilling</label><br>
-            <label><input type="checkbox" id="chkReading" name="chkReading" <?php if ($reading == true) echo 'checked="checked"'; ?> value="Reading" class="option" tabindex="224" > Reading</label><br>
-            <label><input type="checkbox" id="chkTelevision" name="chkTelevision" <?php if ($television == true) echo 'checked="checked"'; ?> value="Television" class="option" tabindex="225" > Watching TV</label><br>
-            <label><input type="checkbox" id="chkChillaxing" name="chkChillaxing" <?php if ($chillaxing == true) echo 'checked="checked"'; ?> value="Chillaxing" class="option" tabindex="226" > Chillaxing</label><br>
-            <label><input type="checkbox" id="chkSkiing" name="chkSkiing" <?php if ($skiing == true) echo 'checked="checked"'; ?> value="Skiing" class="option" tabindex="227" > Skiing</label><br>                 
-            <label><input type="checkbox" id="chkPigskin" name="chkPigskin" <?php if ($pigskin == true) echo 'checked="checked"'; ?> value="Pigskin" class="option" tabindex="227" > Football</label><br>     
+        <fieldset>
+            <legend class="required">What activities do you enjoy?</legend>
+            <label><input type="checkbox" id="chkHiking" name="chkHiking" <?php if ($hiking == true) echo 'checked="checked"'; ?> value="Hiking"  class="option" tabindex="221" style="float:left"> Hiking</label><br>
+            <label><input type="checkbox" id="chkSailing" name="chkSailing" <?php if ($sailing == true) echo 'checked="checked"'; ?> value="Sailing" class="option" tabindex="222"  style="float:left"> Sailing</label><br>
+            <label><input type="checkbox" id="chkGrilling" name="chkGrilling" <?php if ($grilling == true) echo 'checked="checked"'; ?> value="Grilling" class="option" tabindex="223"  style="float:left"> Grilling</label><br>
+            <label><input type="checkbox" id="chkReading" name="chkReading" <?php if ($reading == true) echo 'checked="checked"'; ?> value="Reading" class="option" tabindex="224"  style="float:left"> Reading</label><br>
+            <label><input type="checkbox" id="chkTelevision" name="chkTelevision" <?php if ($television == true) echo 'checked="checked"'; ?> value="Television" class="option" tabindex="225"  style="float:left"> Watching TV</label><br>
+            <label><input type="checkbox" id="chkChillaxing" name="chkChillaxing" <?php if ($chillaxing == true) echo 'checked="checked"'; ?> value="Chillaxing" class="option" tabindex="226"  style="float:left"> Chillaxing</label><br>
+            <label><input type="checkbox" id="chkSkiing" name="chkSkiing" <?php if ($skiing == true) echo 'checked="checked"'; ?> value="Skiing" class="option" tabindex="227"  style="float:left"> Skiing</label><br>                 
+            <label><input type="checkbox" id="chkPigskin" name="chkPigskin" <?php if ($pigskin == true) echo 'checked="checked"'; ?> value="Pigskin" class="option" tabindex="227"  style="float:left"> Football</label><br>     
 
 
         </fieldset>
         <br>
-        <fieldset class="quizInput" style="width:'400'">
+        <fieldset>
             <legend>What adjective best describes you?</legend>
-            <label class="required">Choose one:</label>
+            <label class="required">Choose one: 
             <br>
             <select id="lstAdjective" name="lstAdjective" tabindex="283" size="1">
                 <option <?php if ($adjective == "neutral") echo ' selected="selected" '; ?> value="neutral">Neutral</option>
@@ -358,7 +358,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
                 <option <?php if ($adjective == "cool") echo ' selected="selected" '; ?> value="cool" >Cool</option>
                 <option <?php if ($adjective == "maniacal") echo ' selected="selected" '; ?> value="maniacal">Maniacal</option>
                 <option <?php if ($adjective == "mysterious") echo ' selected="selected" '; ?> value="mysterious" >Mysterious</option>
-            </select><br>
+            </select></label><br>
 
         </fieldset>
         <br>
@@ -368,28 +368,28 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
                       onfocus="this.select()" style="width: 25em; height: 4em;" ><?php echo $bio ?></textarea>
         </fieldset>
 
-        <fieldset class="quizInput" style="width:'400'">
+        <fieldset>
             <legend>Did you move somewhere new?</legend>
-            <label for="txtCity" class="required">City:</label>
+            <label for="txtCity" >City: 
             <input type="text" id="txtCity" name="txtCity" value="<?php echo $city; ?>" tabindex="261" class="option"
-                   maxlength="12" onfocus="this.select()" placeholder="City here" style="width: 10em;"><br>
+                   maxlength="12" onfocus="this.select()" placeholder="City here" style="width: 10em;"></label><br>
         </fieldset>
         <br>
         <fieldset>
             <legend>Would you like to update your profile picture?</legend>
-            <label for="file">Filename:</label>
-            <input type="file" name="file" id="file"><br>
+            <label for="file">Filename: 
+            <input type="file" name="file" id="file"></label><br>
         </fieldset>
         <br>
 
-        <fieldset class="quizInput" style="width:'400'">
-            <legend>Click to continue</legend>
+        <fieldset>
+            <legend>Click to continue:</legend>
 
 
             <input type="reset" id="btnreset" name="btnReset" value="Reset" 
-                   tabindex="993" class="next" >					
+                   tabindex="993" class="btnDad" style="margin-left:30px" >					
             <input type="submit" id="btnSubmit" name="btnSubmit" value="Update Profile" 
-                   tabindex="991" class="next">
+                   tabindex="991" class="btnDad" style="margin-left:30px">
         </fieldset>
 
         <br>

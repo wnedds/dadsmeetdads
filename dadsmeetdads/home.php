@@ -7,5 +7,5 @@
     </section>
     <img src="http://www.countryoaks.info/wp-content/uploads/2010/07/MenFishing2.jpg" alt="" width="400" style='outline: solid 4px lightskyblue;'>
     <br>
-    <p style="text-align:center;padding:30px;font-size:2em"><a href="form.php" style='padding:10px;text-decoration:none;background:linear-gradient(#94E9F7, #66DFF4);color:blue;border-radius:4px;'>Sign up Today</a></p>
+    <p style="text-align:center;padding:30px;font-size:2em"><a href="form.php" style='padding:10px;text-decoration:none;background-color:#66DFF4;color:black;border: 1px solid #709fcf;'>Sign up Today</a></p>
 </article>

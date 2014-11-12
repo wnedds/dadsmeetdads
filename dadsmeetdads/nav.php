@@ -11,7 +11,7 @@
                 print '<form method="post" action="' . $phpSelf . '">';
                 print '<li class="login"><input type="submit" id="btnLogIn" name="btnLogin" value="Log In" 
            tabindex="991" class="next"></li>';
-                print '<li><input type="password" id="txtPasswordInput" name="txtPasswordInput"
+                print '<li class="login"><input type="password" id="txtPasswordInput" name="txtPasswordInput"
                                    value=""
                                    tabindex="131" maxlength="50" placeholder="Enter your password"
                                    onfocus="this.select()"></li>';

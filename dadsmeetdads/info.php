@@ -62,39 +62,6 @@
                     $friendIndex++;
                 }
             }
-            /*
-              ?>
-
-              <li style="float:left"><a href="../dadsmeetdads/profile.php?user=<?php print $friends[0]['fnkTargetDad'] ?>"><?php print "<div><img src='Dadsmeetprofilepics/" . $dadPic1 . ".jpg' alt='' height='90' width='70'></div>"; ?>
-              <p>
-              <?php print $friends[0]['fldTargetFirst'] . " " . $friends[0]['fldTargetLast'] ?>
-              </p>
-              <br></a></li>
-
-              <li style="float:left"><a href="../dadsmeetdads/profile.php?user=<?php print $friends[1]['fnkTargetDad'] ?>"><?php print "<div><img src='Dadsmeetprofilepics/" . $dadPic2 . ".jpg' alt='' height='90' width='70'></div>"; ?>
-              <p>
-              <?php print $friends[1]['fldTargetFirst'] . " " . $friends[1]['fldTargetLast']; ?>
-              </p>
-              <br></a></li>
-
-              <li style="float:left"><a href="../dadsmeetdads/profile.php?user=<?php print $friends[2]['fnkTargetDad'] ?>"><?php print "<div><img src='Dadsmeetprofilepics/" . $dadPic3 . ".jpg' alt='' height='90' width='70'></div>"; ?>
-              <p>
-              <?php print $friends[2]['fldTargetFirst'] . " " . $friends[2]['fldTargetLast'] ?>
-              </p>
-              <br></a></li>
-
-              <li style="float:left"><a href="../dadsmeetdads/profile.php?user=<?php print $friends[3]['fnkTargetDad'] ?>"><?php print "<div><img src='Dadsmeetprofilepics/" . $dadPic3 . ".jpg' alt='' height='90' width='70'></div>"; ?>
-              <p>
-              <?php print $friends[3]['fldTargetFirst'] . " " . $friends[3]['fldTargetLast'] ?>
-              </p>
-              <br></a></li>
-
-              <li style="float:left"><a href="../dadsmeetdads/profile.php?user=<?php print $friends[4]['fnkTargetDad'] ?>"><?php print "<div><img src='Dadsmeetprofilepics/" . $dadPic3 . ".jpg' alt='' height='90' width='70'></div>"; ?>
-              <p>
-              <?php print $friends[4]['fldTargetFirst'] . " " . $friends[4]['fldTargetLast'] ?>
-              </p>
-              <br></a></li>
-              <?php */
             ?>
 
 
