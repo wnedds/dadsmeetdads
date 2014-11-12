@@ -10,6 +10,11 @@
 </script>
 <?php
 include 'top.php';
+
+if (isset($_GET['block'])) {
+    print '<p style="text-align:center;color:red;padding:20px;background-color:white">Sorry, dad, but only administrators can use this function at this time.</p>';
+}
+
 $debug = false;
 $friend = true;
 $query = "SELECT fnkSubjectDad, fnkTargetDad,fldTargetFirst,fldTargetLast,fldTargetPic FROM tblFriends WHERE fnkTargetDad LIKE '" . $_GET['user'] . "' AND fnkSubjectDad LIKE '" . $_SESSION['userName'] . "'";
@@ -167,9 +172,9 @@ if (isset($_POST['btnPost'])) {
                 <div >
                     <?php
                     if ($_SESSION['profilePic'] != '') {
-                        print "<a href='profile.php'><img src='images/" . $_SESSION['profilePic'] . " " . "' alt='' height='100' style='border:solid thick #00c9ec; border-radius: 3px'; max-width:250px></a>";
+                        print "<a href='profile.php'><img src='images/" . $_SESSION['profilePic'] . " " . "' alt='' height='100' style='border:solid thick #00c9ec; border-radius: 2px'; max-width:250px></a>";
                     } else {
-                        print "<a href='profile.php'><img src='images/dadsmeetnodad.jpg' alt='' height='100' style='border:solid thick #00c9ec; border-radius: 3px'; max-width:250px></a>";
+                        print "<a href='profile.php'><img src='images/dadsmeetnodad.jpg' alt='' height='100' style='border:solid thick #00c9ec; border-radius: 2px'; max-width:250px></a>";
                     }
                     ?>
                 </div>
@@ -219,7 +224,7 @@ if (isset($_POST['btnPost'])) {
             
         </div>
  <?php       
-        print '<ol style="height: 20px;padding:0;margin-bottom:40px;">';
+        print '<ol style="height: 40px;padding:0;margin-bottom:20px;">';
 
         if (($_GET['tab'] == 'feed') OR (!isset($_GET['tab']))) {
                     print '     <li class="activetab">Post Feed</li>';

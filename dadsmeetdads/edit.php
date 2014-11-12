@@ -294,14 +294,14 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
             <legend>Add a new password</legend>
             <label for="txtPassword" class="required">Password:</label>
             <input type="password" id="txtPassword" name="txtPassword" value="" tabindex="255" class="option"
-                   maxlength="45" onfocus="this.select()" placeholder="Password here" style="width: 10em;"><br>
+                   maxlength="16" onfocus="this.select()" placeholder="Password here" style="width: 10em;"><br>
         </fieldset>
         <br>    
         <fieldset class="quizInput" style="width:'400'">
             <legend>Confirm your password</legend>
             <label for="txtPassword2" class="required">Password:</label>
             <input type="password" id="txtPassword2" name="txtPassword2" value="" tabindex="255" class="option"
-                   maxlength="45" onfocus="this.select()" placeholder="Password here" style="width: 10em;"><br>
+                   maxlength="16" onfocus="this.select()" placeholder="Password here" style="width: 10em;"><br>
         </fieldset>
         <br>  
 
@@ -309,7 +309,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
             <legend>Change your first name:</legend>
             <label for="txtFirstName" class="required">First Name:</label>
             <input type="text" id="txtFirstName" name="txtFirstName" value="<?php print $firstName; ?>" tabindex="260" class="option"
-                   maxlength="45" onfocus="this.select()" placeholder="First Name here" style="width: 10em;"><br>
+                   maxlength="12" onfocus="this.select()" placeholder="First Name here" style="width: 10em;"><br>
         </fieldset>
         <br>
 
@@ -317,7 +317,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
             <legend>Change your last name:</legend>
             <label for="txtLastName" class="required">Last Name:</label>
             <input type="text" id="txtLastName" name="txtLastName" value="<?php echo $lastName; ?>" tabindex="261" class="option"
-                   maxlength="45" onfocus="this.select()" placeholder="Last Name here" style="width: 10em;"><br>
+                   maxlength="12" onfocus="this.select()" placeholder="Last Name here" style="width: 10em;"><br>
         </fieldset>
         <br>
         <fieldset class="quizInput" style="width:'400'">
@@ -372,7 +372,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
             <legend>Did you move somewhere new?</legend>
             <label for="txtCity" class="required">City:</label>
             <input type="text" id="txtCity" name="txtCity" value="<?php echo $city; ?>" tabindex="261" class="option"
-                   maxlength="45" onfocus="this.select()" placeholder="City here" style="width: 10em;"><br>
+                   maxlength="12" onfocus="this.select()" placeholder="City here" style="width: 10em;"><br>
         </fieldset>
         <br>
         <fieldset>
