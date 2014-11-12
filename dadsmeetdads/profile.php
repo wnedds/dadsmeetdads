@@ -96,7 +96,9 @@ $adjective = 'cool';
 
 if (isset($_POST['btnAddDad'])) {
 
-    $data = array($_SESSION['userName'], $_GET['user'], $firstName, $lastName, $ProfilePic, $city);
+    
+
+    $data = array($_SESSION['userName'], $_GET['user'], $firstName, $lastName, $ProfilePic);
     $query = 'DELETE FROM tblFriends WHERE fnkSubjectDad LIKE "' . $data[0] . '" AND fnkTargetDad LIKE "' . $data[1] . '"';
     //print $query;
     $results = $thisDatabase->delete($query);
@@ -105,6 +107,18 @@ if (isset($_POST['btnAddDad'])) {
     $results = $thisDatabase->insert($query);
 }
 
+if (isset($_POST['btnPost'])) {
+    
+    $post = htmlentities($_POST['txtPost'], ENT_QUOTES, "UTF-8");
+    
+    $data = array($_SESSION['userName'], $_GET['user'], $_SESSION['firstName'], $_SESSION['lastName'], $_SESSION['profilePic'], $post);
+    //$query = 'DELETE FROM tblPosts WHERE fnkSubjectDad LIKE "' . $data[0] . '" AND fnkTargetDad LIKE "' . $data[1] . '"';
+    //print $query;
+    //$results = $thisDatabase->delete($query);
+    $query = 'INSERT INTO tblPosts(fnkSubjectDad,fnkTargetDad,fldSubjectFirst,fldSubjectLast,fldSubjectPic,fldPostText) VALUES("' . $data[0] . '","' . $data[1] . '","' . $data[2] . '","' . $data[3] . '","' . $data [4] . '","' . $data [5] . '")';
+    //print $query;
+    $results = $thisDatabase->insert($query);
+}
 
 /*
   //$query = "SELECT fldUserName, fldFirstName, fldLastName FROM tblUsers WHERE fldUserName LIKE '".[STUFFHERE]."'";
@@ -159,11 +173,13 @@ if (isset($_POST['btnAddDad'])) {
                     }
                     ?>
                 </div>
+                
             </li>
             <li>
                 <div>
                     <?php print "Heyo, " . $_SESSION['firstName'] . "!"; ?>
                 </div>
+                <br>
             </li>
             <li>
                 <p><a href='profile.php'>See your profile</a></p>
@@ -187,44 +203,43 @@ if (isset($_POST['btnAddDad'])) {
          
 
             <?php
+            
             if ($friend == true) {
                 print "<form method='post' action='" . $phpSelf . "?user=" . $_GET['user'] . "''><input type='hidden' name='user' value='" . $_GET['user'] . "'><input type='submit' value='Add this Dad' name='btnAddDad' id='btnAddDad' class='btnDad'></form>";
-            } elseif (!isset($_GET['user']) OR ($_GET['user'] == $_SESSION['userName'])) {
-                print '';
+
             } else {
                 if (isset($_POST['btnAddDad'])) {
                     print 'You have successfully added this dad!';
                 }
-                if (isset($_GET['user'])) {
-                    print "<div><form method='post' action='" . $phpSelf . "?user=" . $_GET['user'] . "'><input type='hidden' name='user' value='" . $_GET['user'] . "'><textarea name='txtPost' style='width:390px;float:right;height:100px;'></textarea><br><input type='submit' value='Post Message' name='btnPost' id='btnPost' style='margin:0;margin-left:240px;' class='btnDad'></form></div>";
+                {
+                    print "<div><form method='post' action='" . $phpSelf . "?user=" . $userName . "'><input type='hidden' name='user' value='" . $_GET['user'] . "'><textarea name='txtPost' style='width:390px;float:right;height:100px;'></textarea><br><input type='submit' value='Post Message' name='btnPost' id='btnPost' style='margin:0;margin-left:240px;margin-top:15px;' class='btnDad'></form></div>";
                 }
             }
             ?>
             
         </div>
-        
-        <ol style="height: 20px;">
-<?php
+ <?php       
+        print '<ol style="height: 20px;padding:0;margin-bottom:40px;">';
+
         if (($_GET['tab'] == 'feed') OR (!isset($_GET['tab']))) {
                     print '     <li class="activetab">Post Feed</li>';
                 } else {
-                    print '     <li class="tab"><a href="profile.php?user='.$userName.'&tab=feed">Post Feed</a></li>';
+                    print '     <li class="tab"><a href="profile.php?user='.$userName.'&tab=feed"><p>Post Feed</p></a></li>';
                 }
                 if ($_GET['tab'] == 'info') {
                     print '     <li class="activetab">DadFacts</li>';
                 } else {
-                    print '     <li class="tab"><a href="profile.php?user='.$userName.'&tab=info">DadFacts</a></li>';
+                    print '     <li class="tab"><a href="profile.php?user='.$userName.'&tab=info"><p>DadFacts</p></a></li>';
                 }
                 if ($_GET['tab'] == 'friends') {
                     print '     <li class="activetab">Pals</li>';
                 } else {
-                    print '     <li class="tab"><a href="profile.php?user='.$userName.'&tab=friends">Pals</a></li>';
+                    print '     <li class="tab"><a href="profile.php?user='.$userName.'&tab=friends"><p>Pals</p></a></li>';
                 }
             
-            ?>
-        </ol>
+            
+        print '</ol>';
  
-        <?php
         if (($_GET['tab'] == 'feed') OR (!isset($_GET['tab']))) {
             include 'feed.php';
         } elseif ($_GET['tab'] == 'info') {
@@ -234,7 +249,6 @@ if (isset($_POST['btnAddDad'])) {
         }
 
         ?> 
-
             </section>
 
 

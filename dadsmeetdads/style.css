@@ -2,6 +2,15 @@
     font-family: arial;
 }
 
+@media screen and (max-width: 1199px) {
+    #wrapper {
+        width: 1000px;
+    }
+    #rightwrap {
+        display:none;
+    }
+}
+
 
 fieldset {
     margin: auto;
@@ -22,15 +31,15 @@ header {
 }
 
 option {
-    color: black;
+    color: #14213d;
 }
 
 select {
-    color: black;
+    color: #14213d;
 }
 
 .option {
-    color: black;
+    color: #14213d;
 }
 
 nav {
@@ -53,17 +62,17 @@ nav ol li {
     list-style-type: none;
     margin-left: 1em;
     margin-right: 1em;
-    color: black;
+    color: #14213d;
 }
 
 nav ol li a {
-    color: black;
+    color: #14213d;
     text-decoration: none;
     padding:5px 30px 5px 30px;
 }
 
 nav ol li:not(.login):hover {
-    color: black;
+    color: #14213d;
     text-decoration: none;
     background-color: #B5CFFE;
 }
@@ -108,8 +117,6 @@ label {
     font-size: .9em;
     text-align: center;
     border: 1px solid #709fcf;
-    -webkit-box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.57);
-    -moz-box-shadow:    0px 3px 13px 0px rgba(50, 50, 50, 0.57);
     box-shadow:         0px 3px 13px 0px rgba(50, 50, 50, 0.57);
 }
 
@@ -121,9 +128,7 @@ label {
     padding: 10px;
     float: left;
     border: 1px solid #709fcf;
-    -webkit-box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.57);
-    -moz-box-shadow:    0px 3px 13px 0px rgba(50, 50, 50, 0.57);
-    box-shadow:         0px 3px 13px 0px rgba(50, 50, 50, 0.57);
+    box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.57);
 }
 #main {
     border-radius: 8px;
@@ -133,9 +138,7 @@ label {
     position: relative;
     padding: 20px;
     border: 1px solid #709fcf;
-    -webkit-box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.57);
-    -moz-box-shadow:    0px 3px 13px 0px rgba(50, 50, 50, 0.57);
-    box-shadow:         0px 3px 13px 0px rgba(50, 50, 50, 0.57);
+    box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.57);
 }
 
 p {
@@ -183,11 +186,23 @@ ol li {
 
 #leftwrap ol li p{
     margin-bottom: 20px;
-    border-radius: 12px;
-    background: linear-gradient(#94E9F7, #66DFF4); 
+    //border-radius: 12px;
+    //background: linear-gradient(#94E9F7, #66DFF4); 
+    border: 1px solid #709fcf;
     padding: 6px 0px 6px 0px;
-    color: blue;
-    
+    color: #14213d;
+    background-color: #66DFF4;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+#leftwrap ol li p:hover, #leftwrap ol li p:focus, #leftwrap ol li p:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 ol li p {
@@ -208,9 +223,7 @@ ol li div {
     border-radius: 10px;
     margin: auto;
     padding: 40px;
-    -webkit-box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.57);
-    -moz-box-shadow:    0px 3px 13px 0px rgba(50, 50, 50, 0.57);
-    box-shadow:         0px 3px 13px 0px rgba(50, 50, 50, 0.57);
+    box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.57);
 }
 
 #popupcontent {
@@ -229,9 +242,7 @@ article {
     width: 900px;
     margin: auto;
     border: 1px solid #709fcf;
-    -webkit-box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.57);
-    -moz-box-shadow:    0px 3px 13px 0px rgba(50, 50, 50, 0.57);
-    box-shadow:         0px 3px 13px 0px rgba(50, 50, 50, 0.57);
+    box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.57);
 }
 
 #tray {
@@ -259,12 +270,13 @@ input {
 
 .friends li a {
     text-decoration: none;
-    color: black;
+    color: #14213d;
 }
 
 #profiletop {
     width: 620px;
     height: 210px;
+    margin-bottom:30px;
 }
 
 #txtdadsearch {
@@ -275,16 +287,20 @@ input {
 
 #rightwrap ol li a {
     text-decoration: none;
-    color: black;
+    color: #14213d;
 }
 
 .btnDad {
     margin-bottom: 20px;
-    border-radius: 12px;
-    background: linear-gradient(#94E9F7, #66DFF4); 
+    //border-radius: 12px;
+    //background: linear-gradient(#94E9F7, #66DFF4); 
+    background-color: #66DFF4;
     padding: 12px 30px 12px 30px;
-    color: blue;
+    color: #14213d;
+    border: 1px solid #709fcf;
+
 }
+
 
 #profilePic {
     width: 205px;
@@ -295,34 +311,64 @@ input {
 }
 
 .tab {
-    //margin: 3px;
+    margin: 3px;
     float: left;
     display: block;
-    width: 180px;
     border: 1px solid #709fcf;
-    padding: 0;
     text-align: center;
     background-color: #66DFF4;
+    width: 160px;
+    color: #14213d;
+    padding: 6px 15px 6px 15px;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    
+}
+
+.tab:hover, .tab:focus, .tab:active {
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 .activetab {
-    //margin: 3px;
+    margin: 3px;
     float: left;
     display: block;
-    width: 180px;
     border: 1px solid #709fcf;
-    border-bottom: none;
     padding: 0;
     text-align: center;
     background-color: #66DFF4;
+    color: #14213d;
+    width: 160px;
+    padding: 6px 15px 6px 15px;
+
+}
+
+
+//Credit to Ian Lunn for the hover effects. The man does hover effects very well.
+
+.tab a p {
+    color: #14213d;
+    width: 160px;
+    //padding: 6px 15px 6px 15px;
+    text-align: center;
 }
 
 .tab a {
-    color: black;
     text-decoration: none;
+    color: #14213d;
 }
 
-.activetab a {
-    color: black;
-    text-decoration: none;
+#namelist {
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 20px;
+    width: 900px;
+    margin: auto;
+    border: 1px solid #709fcf;
+    box-shadow: 0px 3px 13px 0px rgba(50, 50, 50, 0.57);
 }
