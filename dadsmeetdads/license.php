@@ -6,7 +6,7 @@
 
 
 
-<p>When signing up for Dads Meet Dads, you will be provided a free trial to use the Dads Meet Dads service for 72 hours. After this time, your profile will be deleted. Your information will remain in the Dads Meet Dads servers, however, and can be used in future Dads Meet Dads promotions. </p>
+<p>When signing up for Dads Meet Dads, you will be provided with an account to access the Dads Meet Dads network. Your information will remain in the Dads Meet Dads servers and can be used in future Dads Meet Dads promotions. </p>
 
 <h3>SECTION 2 - CONSENT</h3>
 
@@ -14,15 +14,15 @@
 
 <b>How do you get my consent?</b>
 <br>
-<p>When you provide us with personal information to complete a transaction, verify your credit card, place an order, arrange for a delivery or return a purchase, we imply that you consent to our collecting it and using it for that specific reason only.
+<p>When you provide us with personal information to complete a transaction, verify your credit card, place an order, arrange for a delivery or return a purchase, we imply that you consent to our collecting it and using it for that specific reason only. We will then use your credit card information to purchase fancy neckties and shaving supplies.
 
-    If we ask for your personal information for a secondary reason, like marketing, we will either ask you directly for your expressed consent, or provide you with an opportunity to say no.</p>
+    If we ask for your personal information for a secondary reason, like marketing, we will either ask you directly for your expressed consent, or provide you with an opportunity to say no. You won't say no, however. Trust us.</p>
 
 
 
 <b>How do I withdraw my consent?</b>
 <br>
-<p>If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at anytime, by contacting us at wnedds@uvm.edu or mailing us at: Dads Meet Dads 100 Burlington Vermont United States 05401</p>
+<p>If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at anytime, by contacting us at wnedds@uvm.edu or mailing us at: Dads Meet Dads 100 Place Street, Burlington Vermont United States 05401</p>
 
 
 <h3>SECTION 3 - DISCLOSURE</h3>
@@ -44,13 +44,13 @@ SECTION 6 - SECURITY
 
 <h3>SECTION 7 - COOKIES</h3>
 
-        <p>PHP cookies are used on this site. If your browser does not support cookies, you will be unable to use Dads Meet Dads services. </p>
+        <p>They're delicious. Dads Meet Dads does not use cookies in its services, as far as we know. </p>
 
 <h3>SECTION 8 - DAD POLICY</h3>
 
 
 
-<p> By using this site, you represent that you are a dad. All parents are dads, but not all dads are parents. Restrictions apply, please ask your nearest dad for details.</p>
+<p> By using this site, you represent that you are a dad. All parents are dads, but not all dads are parents. Restrictions apply, please ask your nearest dad for details. If you have to ask if you are a dad, then you are not a dad. Go away, not-dad.</p>
 
 
 
@@ -58,7 +58,7 @@ SECTION 6 - SECURITY
 
 
 
-<p>We reserve the right to modify this privacy policy at any time, so please review it frequently. Changes and clarifications will take effect immediately upon their posting on the website. If we make material changes to this policy, we will notify you here that it has been updated, so that you are aware of what information we collect, how we use it, and under what circumstances, if any, we use and/or disclose it.</p>
+<p>We reserve the right to modify this privacy policy at any time, so please review it frequently. Changes and clarifications will take effect immediately upon their posting on the website. If we make material changes to this policy, we will (not) notify you here that it has been updated, so that you are aware of what information we collect, how we use it, and under what circumstances, if any, we use and/or disclose it.</p>
 
 
 
@@ -70,7 +70,7 @@ SECTION 6 - SECURITY
 
 <p>[Re: Privacy Compliance Officer]</p>
 
-<p>[100 Burlington Vermont United States 05401]</p>
+<p>[100 Main Avenue Burlington Vermont United States 05401]</p>
 <br>
 <br>
 <h1>TERMS OF SERVICE</h1>
@@ -79,31 +79,33 @@ SECTION 6 - SECURITY
 
 
 
-<p>This website is operated by Dads Meet Dads. Throughout the site, the terms “we”, “us” and “our” refer to Dads Meet Dads. Dads Meet Dads offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here.</p>
+<p>This website is operated by Dads Meet Dads. Throughout the site, the terms “we”, “us” and “our” refer to Dads Meet Dads. Dads Meet Dads offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here by Dads Meet Dads.</p>
+<p>Dads Meet Dads.</p>
+<p>Dads Meet Dads.</p>
+<p>Dads Meet Dads.</p>
 
 
-
-<p>By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those additional terms and conditions and policies referenced herein and/or available by hyperlink. These Terms of Service apply  to all users of the site, including without limitation users who are browsers, vendors, customers, merchants, and/ or contributors of content.</p>
+<p>By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those "additional" terms and conditions and policies referenced "herein" and/or available by hyperlink. "These" Terms of Service apply  "to" all users of the site, including "without" limitation users who "are" browsers, vendors, dads, customers, merchants, dads, and/ or contributors of content.</p>
 
 
 
 <p>Please read these Terms of Service carefully before accessing or using our website. By accessing or using any part of the site, you agree to be bound by these Terms of Service. If you do not agree to all the terms and conditions of this agreement, then you may not access the website or use any services. If these Terms of Service are considered an offer, acceptance is expressly limited to these Terms of Service.</p>
 
 
-
+<p>Editor's note: This is really long, isn't it? I really didn't plan that out. Hold on, we're almost done.</p>
 
 
 <h3>SECTION 1 - USAGE TERMS</h3>
 
 <p>
 
-By agreeing to these Terms of Service, you represent that you are at least the age of majority in your state or province of residence, or that you are the age of majority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site.
+By agreeing to these Terms of Service, you represent that you are at least the age of dadjority in your state or province of residence, or that you are the age of dadjority in your state or province of residence and you have given us your consent to allow any of your minor dependents to use this site.
 
-You may not use our products for any illegal or unauthorized purpose nor may you, in the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws).
+You may not use our products for any illegal or unauthorized purpose nor may you, in the use of the Service, violate any laws in your jurisdiction (including but not limited to copyright laws). Don't do drugs, kids.
 
-You must not transmit any worms or viruses or any code of a destructive nature.
+You must not transmit any worms, trojans, malware, viruses, or any code of a destructive nature. Seriously, not cool dad.
 
-A breach or violation of any of the Terms will result in an immediate termination of your Services.
+A breach or violation of any of the Terms will result in an immediate termination of your Services and your Life.
 </p>
 
 <h3>
@@ -111,9 +113,9 @@ SECTION 2 - GENERAL CONDITIONS
 </h3>
 
 <p>
-We reserve the right to refuse service to anyone for any reason at any time.
+We reserve the right to refuse service to anyone for any reason at any time (namely, for not being dads).
 
-You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always encrypted during transfer over networks.
+You understand that your content (not including credit card information), may be transferred unencrypted and involve (a) transmissions over various networks; and (b) changes to conform and adapt to technical requirements of connecting networks or devices. Credit card information is always (read: mostly) encrypted during transfer over networks.
 
 You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.
 
@@ -125,7 +127,7 @@ SECTION 3 - ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION
 </h3>
 
 <p>
-We are not responsible if information made available on this site is not accurate, complete or current. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.
+We are not responsible if information made available on this site is not accurate, complete, current, or bug-free. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.
 </p>
 <p>
 This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.
@@ -144,8 +146,11 @@ SECTION 5 - PERSONAL INFORMATION
 </h3>
 
 <p>
-Your submission of personal information through the website is governed by our Privacy Policy. To view our Privacy Policy.
+Your submission of personal information through the website is governed by our Privacy Policy. To view our Privacy Policy, go to the provacy policy page.
 </p>
+
+<p>Wait, this isn't the privacy policy? What is this, then? What have we been reading?</p>
+
 
 <h3>
 SECTION 6 - ERRORS, INACCURACIES AND OMISSIONS

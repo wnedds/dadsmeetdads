@@ -166,9 +166,9 @@ if (isset($_POST["btnSubmit"])) {
             }
 
 
-            $data = array($password, $firstName, $lastName, $bio, $city, $gender, $ProfilePic);
-            $query = 'UPDATE tblUsers SET fldPassword="' . $data[0] . '",fldFirstName="' . $data[1] . '",fldLastName="' . $data[2] . '",fldBio="' . $data[3] . '",fldCity="' . $data[4] . '",fldGender="' . $data[5] . '",fldPicName="' . $data[6] . '" WHERE fldUserName LIKE "'.$_SESSION['userName'].'"';
-            print $query;
+            $data = array($password, $firstName, $lastName, $bio, $city, $gender, $ProfilePic,$adjective);
+            $query = 'UPDATE tblUsers SET fldPassword="' . $data[0] . '",fldFirstName="' . $data[1] . '",fldLastName="' . $data[2] . '",fldBio="' . $data[3] . '",fldCity="' . $data[4] . '",fldGender="' . $data[5] . '",fldPicName="' . $data[6] . '",fldAdjective="' . $data[7] . '" WHERE fldUserName LIKE "'.$_SESSION['userName'].'"';
+            //print $query;
 
             //print $query;
             if ($debug) {
@@ -205,7 +205,7 @@ if (isset($_POST["btnSubmit"])) {
         try {
             $thisDatabase->db->beginTransaction();
             $data = array($userName, $hiking, $sailing, $grilling, $reading, $television, $chillaxing, $skiing, $pigskin);
-            $query = 'UPDATE tblLikes SET fnkUserId="' . $data[8] . '",fldHiking="' . $data[8] . '",fldSailing="' . $data[8] . '",fldGrilling="' . $data[8] . '",fldReading="' . $data[8] . '",fldTelevision="' . $data[8] . '",fldChillaxing="' . $data[8] . '",fldSkiing="' . $data[8] . '",fldPigskin="' . $data[8] . '" WHERE fldUserName LIKE "'.$_SESSION['userName'].'"';
+            $query = 'UPDATE tblLikes SET fnkUserId="' . $data[0] . '",fldHiking="' . $data[1] . '",fldSailing="' . $data[2] . '",fldGrilling="' . $data[3] . '",fldReading="' . $data[4] . '",fldTelevision="' . $data[5] . '",fldChillaxing="' . $data[6] . '",fldSkiing="' . $data[7] . '",fldPigskin="' . $data[8] . '" WHERE fnkUserId LIKE "'.$_SESSION['userName'].'"';
             //print $query;
 
             //print $query;
@@ -215,7 +215,7 @@ if (isset($_POST["btnSubmit"])) {
                 print_r($data);
                 print"</pre></p>";
             }
-            $results = $thisDatabase->update($query);
+            $results = $thisDatabase->insert($query);
 
             $primaryKey = $email;
             if ($debug) {
@@ -334,7 +334,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
             <label><input type="checkbox" id="chkSailing" name="chkSailing" <?php if ($sailing == true) echo 'checked="checked"'; ?> value="Sailing" class="option" tabindex="222"  style="float:left"> Sailing</label><br>
             <label><input type="checkbox" id="chkGrilling" name="chkGrilling" <?php if ($grilling == true) echo 'checked="checked"'; ?> value="Grilling" class="option" tabindex="223"  style="float:left"> Grilling</label><br>
             <label><input type="checkbox" id="chkReading" name="chkReading" <?php if ($reading == true) echo 'checked="checked"'; ?> value="Reading" class="option" tabindex="224"  style="float:left"> Reading</label><br>
-            <label><input type="checkbox" id="chkTelevision" name="chkTelevision" <?php if ($television == true) echo 'checked="checked"'; ?> value="Television" class="option" tabindex="225"  style="float:left"> Watching TV</label><br>
+            <label><input type="checkbox" id="chkTelevision" name="chkTelevision" <?php if ($television == true) echo 'checked="checked"'; ?> value="Television" class="option" tabindex="225"  style="float:left"> Watching the television</label><br>
             <label><input type="checkbox" id="chkChillaxing" name="chkChillaxing" <?php if ($chillaxing == true) echo 'checked="checked"'; ?> value="Chillaxing" class="option" tabindex="226"  style="float:left"> Chillaxing</label><br>
             <label><input type="checkbox" id="chkSkiing" name="chkSkiing" <?php if ($skiing == true) echo 'checked="checked"'; ?> value="Skiing" class="option" tabindex="227"  style="float:left"> Skiing</label><br>                 
             <label><input type="checkbox" id="chkPigskin" name="chkPigskin" <?php if ($pigskin == true) echo 'checked="checked"'; ?> value="Pigskin" class="option" tabindex="227"  style="float:left"> Football</label><br>     

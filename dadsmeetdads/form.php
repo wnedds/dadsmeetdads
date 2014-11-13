@@ -206,10 +206,10 @@ if (isset($_POST["btnSubmit"])) {
                 $ProfilePic = 'dadsmeetnodad.jpg';
             }
 
-            $data = array($userName, $password, $firstName, $lastName, $bio, $city, $email, $confirm, $gender, $ProfilePic);
-            $query = 'INSERT INTO tblUsers(fldUserName,fldPassword,fldFirstName,fldLastName,fldBio,fldCity,pmkEmail,fldConfirmed,fldGender,fldPicName) VALUES("' . $data[0] . '","' . $data[1] . '","' . $data[2] . '","' . $data[3] . '","' . $data[4] . '","' . $data[5] . '","' . $data[6] . '","' . $data[7] . '","' . $data[8] . '","' . $data[9] . '")';
+            $data = array($userName, $password, $firstName, $lastName, $bio, $city, $email, $confirm, $gender, $ProfilePic, $adjective);
+            $query = 'INSERT INTO tblUsers(fldUserName,fldPassword,fldFirstName,fldLastName,fldBio,fldCity,pmkEmail,fldConfirmed,fldGender,fldPicName,fldAdjective) VALUES("' . $data[0] . '","' . $data[1] . '","' . $data[2] . '","' . $data[3] . '","' . $data[4] . '","' . $data[5] . '","' . $data[6] . '","' . $data[7] . '","' . $data[8] . '","' . $data[9] . '","' . $data[10] . '")';
 
-//print $query;
+print $query;
             if ($debug) {
                 print "<p>sql " . $query;
                 print"<p><pre>";
@@ -246,7 +246,7 @@ if (isset($_POST["btnSubmit"])) {
             $data = array($userName, $hiking, $sailing, $grilling, $reading, $television, $chillaxing, $skiing, $pigskin);
             $query = 'INSERT INTO tblLikes(fnkUserId,fldHiking,fldSailing,fldGrilling,fldReading,fldTelevision,fldChillaxing,fldSkiing,fldPigskin) VALUES("' . $data[0] . '","' . $data[1] . '","' . $data[2] . '","' . $data[3] . '","' . $data[4] . '","' . $data[5] . '","' . $data[6] . '","' . $data[7] . '","' . $data[8] . '")';
 
-    print $query;
+    //print $query;
             if ($debug) {
                 print "<p>sql " . $query;
                 print"<p><pre>";
@@ -429,7 +429,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
             <label><input type="checkbox" id="chkSailing" name="chkSailing" <?php if ($sailing) echo 'checked="checked"'; ?> value="Sailing" class="option" tabindex="222" > Sailing</label><br>
             <label><input type="checkbox" id="chkGrilling" name="chkGrilling" <?php if ($grilling) echo 'checked="checked"'; ?> value="Grilling" class="option" tabindex="223" > Grilling</label><br>
             <label><input type="checkbox" id="chkReading" name="chkReading" <?php if ($reading) echo 'checked="checked"'; ?> value="Reading" class="option" tabindex="224" > Reading</label><br>
-            <label><input type="checkbox" id="chkTelevision" name="chkTelevision" <?php if ($television) echo 'checked="checked"'; ?> value="Television" class="option" tabindex="225" > Watching TV</label><br>
+            <label><input type="checkbox" id="chkTelevision" name="chkTelevision" <?php if ($television) echo 'checked="checked"'; ?> value="Television" class="option" tabindex="225" > Watching the television</label><br>
             <label><input type="checkbox" id="chkChillaxing" name="chkChillaxing" <?php if ($chillaxing) echo 'checked="checked"'; ?> value="Chillaxing" class="option" tabindex="226" > Chillaxing</label><br>
             <label><input type="checkbox" id="chkSkiing" name="chkSkiing" <?php if ($skiing) echo 'checked="checked"'; ?> value="Skiing" class="option" tabindex="227" > Skiing</label><br>                 
             <label><input type="checkbox" id="chkPigskin" name="chkPigskin" <?php if ($pigskin) echo 'checked="checked"'; ?> value="Pigskin" class="option" tabindex="227" > Football</label><br>     

@@ -15,14 +15,14 @@
             //print $friends[$friendIndex]["fnkTargetDad"];
             $postTime = strtotime($onePost["fldPostDate"]);
             $finalPostTime = date('m\/d\/y', $postTime);
-            echo '<div class="topContainer" style="width:560px;padding:0;min-height:100px;overflow:auto;">';
+            echo '<div class="topContainer" style="width:600px;padding:0;min-height:100px;overflow:auto;">';
             echo '<div class="postContainer" style="float:left;margin-right:20px;">';
-            echo '<a href="../dadsmeetdads/profile.php?user=' . $onePost["fldSubjectDad"] . '">';
+            echo '<a href="../dadsmeetdads/profile.php?user=' . $onePost["fnkSubjectDad"] . '">';
             echo '<div id="infoContainer" style="float:left;width:90px;height:90px">';
             echo '<img src="images/' . $onePost["fldSubjectPic"] . '" alt="" style="max-width: 90px;max-height:90px;margin-auto"></div>';
             echo "</a>";
             echo "</div>";
-            echo "<div class='messageContainer' style='float:left;border:2px #709fcf solid;width:440px;border-radius:2px;'>";
+            echo "<div class='messageContainer' style='float:left;border:2px #709fcf solid;width:480px;border-radius:2px;'>";
             echo "<p style='text-align:left;margin:10px;margin-bottom:0'>";
             echo "<strong>Posted by " . $onePost['fldSubjectFirst'] . " " . $onePost["fldSubjectLast"] . " on " . $finalPostTime . "</strong>";
             echo "</p>";

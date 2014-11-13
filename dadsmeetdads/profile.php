@@ -87,7 +87,7 @@ $city = $results[0]['fldCity'];
 $email = $results[0]['pmkEmail'];
 $ProfilePic = $results[0]['fldPicName'];
 $gender = $results[0]['fldGender'];
-$adjective = 'cool';
+$adjective = $results[0]['fldAdjective'];
 //print "The profile pic is: ".$ProfilePic;
 
 if (isset($_POST['btnAddDad'])) {
