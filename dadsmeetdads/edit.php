@@ -26,7 +26,7 @@ $gender = $editInfo[0]['fldGender'];
 $city = $editInfo[0]['fldCity'];
 $ProfilePic = $editInfo[0]['fldPicName'];
 $bio = $editInfo[0]['fldBio'];
-
+$adjective = $editInfo[0]['fldAdjective'];
 
 
 // this would be the full url of your form
@@ -148,7 +148,6 @@ if (isset($_POST["btnSubmit"])) {
     if (!$errorMsg) {
 
         //Building queries to insert info into the database
-        $primaryKey = "";
         $dataEntered = false;
         try {
             $thisDatabase->db->beginTransaction();
@@ -166,7 +165,7 @@ if (isset($_POST["btnSubmit"])) {
             }
 
 
-            $data = array($password, $firstName, $lastName, $bio, $city, $gender, $ProfilePic,$adjective);
+            $data = array($password, $firstName, $lastName, $bio, $city, $gender, $ProfilePic, $adjective);
             $query = 'UPDATE tblUsers SET fldPassword="' . $data[0] . '",fldFirstName="' . $data[1] . '",fldLastName="' . $data[2] . '",fldBio="' . $data[3] . '",fldCity="' . $data[4] . '",fldGender="' . $data[5] . '",fldPicName="' . $data[6] . '",fldAdjective="' . $data[7] . '" WHERE fldUserName LIKE "'.$_SESSION['userName'].'"';
             //print $query;
 
@@ -179,10 +178,6 @@ if (isset($_POST["btnSubmit"])) {
             }
             $results = $thisDatabase->insert($query);
 
-            $primaryKey = $email;
-            if ($debug) {
-                print "<p>pmk= " . $primaryKey;
-            }
 
 // all sql statements are done so lets commit to our changes
             $dataEntered = $thisDatabase->db->commit();
@@ -200,7 +195,6 @@ if (isset($_POST["btnSubmit"])) {
 
         //Second Query
 
-        $primaryKey = "";
         $dataEntered = false;
         try {
             $thisDatabase->db->beginTransaction();
@@ -217,10 +211,69 @@ if (isset($_POST["btnSubmit"])) {
             }
             $results = $thisDatabase->insert($query);
 
-            $primaryKey = $email;
+// all sql statements are done so lets commit to our changes
+            $dataEntered = $thisDatabase->db->commit();
+            $dataEntered = true;
             if ($debug) {
-                print "<p>pmk= " . $primaryKey;
+                print "<p>transaction complete ";
             }
+        } catch (PDOException $e) {
+            $thisDatabase->db->rollback();
+            if ($debug) {
+                print "Error!: " . $e->getMessage() . "</br>";
+            }
+            $errorMsg[] = "An error occured. Please wait a few minutes and try again.";
+        }
+
+    //Query to update the friends table with changed name and profile picture
+
+
+        $dataEntered = false;
+        try {
+            $thisDatabase->db->beginTransaction();
+            $data = array($firstName,$lastName,$ProfilePic);
+            $query = 'UPDATE tblFriends SET fldTargetFirst="' . $data[0] . '", fldTargetLast="' . $data[1] . '", fldTargetPic="' . $data[2] . '" WHERE fnkTargetDad LIKE "'.$_SESSION['userName'].'"';
+            print $query;
+
+            //print $query;
+            if ($debug) {
+                print "<p>sql " . $query;
+                print"<p><pre>";
+                print_r($data);
+                print"</pre></p>";
+            }
+            $results = $thisDatabase->insert($query);
+
+// all sql statements are done so lets commit to our changes
+            $dataEntered = $thisDatabase->db->commit();
+            $dataEntered = true;
+            if ($debug) {
+                print "<p>transaction complete ";
+            }
+        } catch (PDOException $e) {
+            $thisDatabase->db->rollback();
+            if ($debug) {
+                print "Error!: " . $e->getMessage() . "</br>";
+            }
+            $errorMsg[] = "An error occured. Please wait a few minutes and try again.";
+        }
+        
+//Query to update the post list
+        $dataEntered = false;
+        try {
+            $thisDatabase->db->beginTransaction();
+            $data = array($firstName,$lastName,$ProfilePic);
+            $query = 'UPDATE tblPosts SET fldSubjectFirst="' . $data[0] . '", fldSubjectLast="' . $data[1] . '", fldSubjectPic="' . $data[2] . '" WHERE fnkSubjectDad LIKE "'.$_SESSION['userName'].'"';
+            print $query;
+
+            //print $query;
+            if ($debug) {
+                print "<p>sql " . $query;
+                print"<p><pre>";
+                print_r($data);
+                print"</pre></p>";
+            }
+            $results = $thisDatabase->insert($query);
 
 // all sql statements are done so lets commit to our changes
             $dataEntered = $thisDatabase->db->commit();
@@ -237,14 +290,6 @@ if (isset($_POST["btnSubmit"])) {
         }
 
 
-        // If the transaction was successful, give success message
-        if ($dataEntered) {
-            if ($debug) {
-                print "<p>data entered now prepare keys ";
-            }
-            //#################################################################
-            // create a key value for confirmation
-        } //ends if data was entered
     } // ends form is valid
 } // ends if form was submitted. We will be adding more information ABOVE this        
 print "<article style='padding:30px'>";

@@ -124,11 +124,11 @@ if (isset($_POST['btnPost'])) {
     <section id="rightwrap">
         Dads you should meet:
         <ol>
-            <li><?php print "<a href='profile.php?user=" . $randDad[0]['fldUserName'] . "'><img src='images/" . $randDad [0]['fldPicName'] . "' alt='' height='90' width='70'>"; ?><br><p><?php print "" . $randDad[0]['fldFirstName'] . " " . $randDad[0]['fldLastName'] . "</a>"; ?></p><br></li>
+            <li><?php print "<a href='profile.php?user=" . $randDad[0]['fldUserName'] . "'><div style='width:90px;height:90px'><img src='images/" . $randDad [0]['fldPicName'] . "' alt='' style='max-height:90;max-width:90px'></div>"; ?><br><p><?php print "" . $randDad[0]['fldFirstName'] . " " . $randDad[0]['fldLastName'] . "</a>"; ?></p><br></li>
 
-            <li><?php print "<a href='profile.php?user=" . $randDad[1]['fldUserName'] . "'><img src='images/" . $randDad [1]['fldPicName'] . "' alt='' height='90' width='70'>"; ?><br><p><?php print "" . $randDad[1]['fldFirstName'] . " " . $randDad[1]['fldLastName'] . "</a>"; ?></p><br></li>
+            <li><?php print "<a href='profile.php?user=" . $randDad[1]['fldUserName'] . "'><div style='width:90px;height:90px'><img src='images/" . $randDad [1]['fldPicName'] . "' alt='' style='max-height:90;max-width:90px'></div>"; ?><br><p><?php print "" . $randDad[1]['fldFirstName'] . " " . $randDad[1]['fldLastName'] . "</a>"; ?></p><br></li>
 
-            <li><?php print "<a href='profile.php?user=" . $randDad[2]['fldUserName'] . "'><img src='images/" . $randDad [2]['fldPicName'] . "' alt='' height='90' width='70'>"; ?><br><p><?php print "" . $randDad[2]['fldFirstName'] . " " . $randDad[2]['fldLastName'] . "</a>"; ?></p><br></li>
+            <li><?php print "<a href='profile.php?user=" . $randDad[2]['fldUserName'] . "'><div style='width:90px;height:90px'><img src='images/" . $randDad [2]['fldPicName'] . "' alt='' style='max-height:90;max-width:90px'></div>"; ?><br><p><?php print "" . $randDad[2]['fldFirstName'] . " " . $randDad[2]['fldLastName'] . "</a>"; ?></p><br></li>
         </ol>
     </section>
     <section id="leftwrap">
