@@ -114,6 +114,7 @@ if (isset($_POST['btnPost'])) {
         $query = 'INSERT INTO tblPosts(fnkSubjectDad,fnkTargetDad,fldSubjectFirst,fldSubjectLast,fldSubjectPic,fldPostText) VALUES("' . $data[0] . '","' . $data[1] . '","' . $data[2] . '","' . $data[3] . '","' . $data [4] . '","' . $data [5] . '")';
         //print $query;
         $results = $thisDatabase->insert($query);
+        unset($_POST['txtPost']);
     }
 }
 

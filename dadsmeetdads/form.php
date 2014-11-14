@@ -19,7 +19,7 @@ $gender = 'other';
 $city = '';
 $confirm = 0;
 $ProfilePic = '';
-
+$bio = '';
 
 
 
@@ -209,7 +209,7 @@ if (isset($_POST["btnSubmit"])) {
             $data = array($userName, $password, $firstName, $lastName, $bio, $city, $email, $confirm, $gender, $ProfilePic, $adjective);
             $query = 'INSERT INTO tblUsers(fldUserName,fldPassword,fldFirstName,fldLastName,fldBio,fldCity,pmkEmail,fldConfirmed,fldGender,fldPicName,fldAdjective) VALUES("' . $data[0] . '","' . $data[1] . '","' . $data[2] . '","' . $data[3] . '","' . $data[4] . '","' . $data[5] . '","' . $data[6] . '","' . $data[7] . '","' . $data[8] . '","' . $data[9] . '","' . $data[10] . '")';
 
-print $query;
+//print $query;
             if ($debug) {
                 print "<p>sql " . $query;
                 print"<p><pre>";
@@ -394,7 +394,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
         <fieldset>
             <legend>Confirm your password</legend>
             <label for="txtPassword2" class="required">Password: 
-            <input type="password" id="txtPassword2" name="txtPassword2" value="" tabindex="255" class="option"
+            <input type="password" id="txtPassword2" name="txtPassword2" value="" tabindex="260" class="option"
                    maxlength="16" required='required' onfocus="this.select()" placeholder="Password here" style="width: 10em;"></label><br>
         </fieldset>
         <br>  
@@ -402,7 +402,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
         <fieldset>
             <legend>What is your first name?</legend>
             <label for="txtFirstName" class="required">First Name: 
-            <input type="text" id="txtFirstName" name="txtFirstName" value="<?php print $firstName; ?>" tabindex="260" class="option"
+            <input type="text" id="txtFirstName" name="txtFirstName" value="<?php print $firstName; ?>" tabindex="270" class="option"
                    maxlength="12" required='required' onfocus="this.select()" placeholder="First Name here" style="width: 10em;"></label><br>
         </fieldset>
         <br>
@@ -410,7 +410,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
         <fieldset>
             <legend>What is your last name?</legend>
             <label for="txtLastName" class="required">Last Name: 
-            <input type="text" id="txtLastName" name="txtLastName" value="<?php echo $lastName; ?>" tabindex="261" class="option"
+            <input type="text" id="txtLastName" name="txtLastName" value="<?php echo $lastName; ?>" tabindex="280" class="option"
                    maxlength="12" required='required' onfocus="this.select()" placeholder="Last Name here" style="width: 10em;"></label><br>
         </fieldset>
         <br>
@@ -418,21 +418,21 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
             <legend class="required">What gender dad are you?</legend>
             <label><input type="radio" class="option" id="radDadYoung" name="radGender" <?php if ($gender == "boy") echo ' checked="checked" '; ?> value="boy">Boy Dad</label><br>
             <label><input type="radio"  class="option" id="radDadMed" name="radGender" <?php if ($gender == "girl") echo ' checked="checked" '; ?> value="girl">Girl Dad</label><br>
-            <label><input type="radio"  class="option" id="radDadOld" name="radGender" <?php if ($gender == "other") echo ' checked="checked" '; ?> value="other">Outside-The-Gender-Binary Dad</label><br>
+            <label><input type="radio"  class="option" id="radDadOld" name="radGender" <?php if ($gender == "other") echo ' checked="checked" '; ?> value="">Outside-The-Gender-Binary Dad</label><br>
 
 
         </fieldset>
         <br>
         <fieldset>
             <legend class="required">What activities do you enjoy?</legend>
-            <label><input type="checkbox" id="chkHiking" name="chkHiking" <?php if ($hiking) echo 'checked="checked"'; ?> value="Hiking"  class="option" tabindex="221" > Hiking</label><br>
-            <label><input type="checkbox" id="chkSailing" name="chkSailing" <?php if ($sailing) echo 'checked="checked"'; ?> value="Sailing" class="option" tabindex="222" > Sailing</label><br>
-            <label><input type="checkbox" id="chkGrilling" name="chkGrilling" <?php if ($grilling) echo 'checked="checked"'; ?> value="Grilling" class="option" tabindex="223" > Grilling</label><br>
-            <label><input type="checkbox" id="chkReading" name="chkReading" <?php if ($reading) echo 'checked="checked"'; ?> value="Reading" class="option" tabindex="224" > Reading</label><br>
-            <label><input type="checkbox" id="chkTelevision" name="chkTelevision" <?php if ($television) echo 'checked="checked"'; ?> value="Television" class="option" tabindex="225" > Watching the television</label><br>
-            <label><input type="checkbox" id="chkChillaxing" name="chkChillaxing" <?php if ($chillaxing) echo 'checked="checked"'; ?> value="Chillaxing" class="option" tabindex="226" > Chillaxing</label><br>
-            <label><input type="checkbox" id="chkSkiing" name="chkSkiing" <?php if ($skiing) echo 'checked="checked"'; ?> value="Skiing" class="option" tabindex="227" > Skiing</label><br>                 
-            <label><input type="checkbox" id="chkPigskin" name="chkPigskin" <?php if ($pigskin) echo 'checked="checked"'; ?> value="Pigskin" class="option" tabindex="227" > Football</label><br>     
+            <label><input type="checkbox" id="chkHiking" name="chkHiking" <?php if ($hiking) echo 'checked="checked"'; ?> value="Hiking"  class="option" tabindex="290" > Hiking</label><br>
+            <label><input type="checkbox" id="chkSailing" name="chkSailing" <?php if ($sailing) echo 'checked="checked"'; ?> value="Sailing" class="option" tabindex="291" > Sailing</label><br>
+            <label><input type="checkbox" id="chkGrilling" name="chkGrilling" <?php if ($grilling) echo 'checked="checked"'; ?> value="Grilling" class="option" tabindex="292" > Grilling</label><br>
+            <label><input type="checkbox" id="chkReading" name="chkReading" <?php if ($reading) echo 'checked="checked"'; ?> value="Reading" class="option" tabindex="293" > Reading</label><br>
+            <label><input type="checkbox" id="chkTelevision" name="chkTelevision" <?php if ($television) echo 'checked="checked"'; ?> value="Television" class="option" tabindex="294" > Watching the television</label><br>
+            <label><input type="checkbox" id="chkChillaxing" name="chkChillaxing" <?php if ($chillaxing) echo 'checked="checked"'; ?> value="Chillaxing" class="option" tabindex="295" > Chillaxing</label><br>
+            <label><input type="checkbox" id="chkSkiing" name="chkSkiing" <?php if ($skiing) echo 'checked="checked"'; ?> value="Skiing" class="option" tabindex="296" > Skiing</label><br>                 
+            <label><input type="checkbox" id="chkPigskin" name="chkPigskin" <?php if ($pigskin) echo 'checked="checked"'; ?> value="Pigskin" class="option" tabindex="297" > Football</label><br>     
 
 
         </fieldset>
@@ -460,13 +460,13 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
         <fieldset>					
             <legend>Personalize your profile with a small biography:</legend>
             <textarea id="txtBio" name="txtBio" tabindex="300" 
-                      onfocus="this.select()" style="width: 25em; height: 4em;" placeholder="<?php echo $bio; ?>" ></textarea>
+                      onfocus="this.select()" style="width: 25em; height: 4em;" placeholder="Enter a bio here!" ><?php echo $bio; ?></textarea>
         </fieldset>
 
         <fieldset>
             <legend>Where are you?</legend>
             <label for="txtCity">City: 
-            <input type="text" id="txtCity" name="txtCity" value="<?php echo $city; ?>" tabindex="261" class="option"
+            <input type="text" id="txtCity" name="txtCity" value="<?php echo $city; ?>" tabindex="350" class="option"
                    maxlength="16" onfocus="this.select()" placeholder="City here" style="width: 10em;"></label><br>
         </fieldset>
         <br>
@@ -495,7 +495,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
 
 
             <input type="reset" id="btnreset" name="btnReset" value="Reset" 
-                   tabindex="993" class="btnDad" style="margin-left:40px" >					
+                   tabindex="990" class="btnDad" style="margin-left:40px" >					
             <input type="submit" id="btnSubmit" name="btnSubmit" value="Create Profile" 
                    tabindex="991" class="btnDad" style="margin-left:40px">
         </fieldset>

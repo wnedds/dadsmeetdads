@@ -6,7 +6,7 @@ include 'top.php';
     }   
 print '<article>';
     
-    $query = "SELECT fldFirstName, fldLastName, fldUserName, fldPicName FROM (SELECT fldFirstName, fldLastName, fldUserName, fldPicName, concat(fldFirstName, fldLastName) as fldName FROM tblUsers) as tblNames WHERE fldName LIKE '%" . $_GET['txtDadSearch'] . "%'";
+    $query = "SELECT fldFirstName, fldLastName, fldUserName, fldPicName FROM (SELECT fldFirstName, fldLastName, fldUserName, fldPicName, concat(fldFirstName,' ', fldLastName) as fldName FROM tblUsers) as tblNames WHERE fldName LIKE '%" . $_GET['txtDadSearch'] . "%'";
     //print $query;
 $searchResults = $thisDatabase->select($query);
 //print_r($searchResults);

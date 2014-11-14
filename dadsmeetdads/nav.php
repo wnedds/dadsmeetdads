@@ -4,8 +4,10 @@
 
         <?php
         
-        
-            if (!isset($_SESSION['userName'])) {
+            if (!isset($_SESSION['userName']) and ($path_parts['filename'] != 'index')) {
+                print '';
+            }
+            elseif (!isset($_SESSION['userName'])) {
             
             
                 print '<form method="post" action="' . $phpSelf . '">';

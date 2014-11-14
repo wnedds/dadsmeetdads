@@ -233,7 +233,7 @@ if (isset($_POST["btnSubmit"])) {
             $thisDatabase->db->beginTransaction();
             $data = array($firstName,$lastName,$ProfilePic);
             $query = 'UPDATE tblFriends SET fldTargetFirst="' . $data[0] . '", fldTargetLast="' . $data[1] . '", fldTargetPic="' . $data[2] . '" WHERE fnkTargetDad LIKE "'.$_SESSION['userName'].'"';
-            print $query;
+            //print $query;
 
             //print $query;
             if ($debug) {
@@ -264,7 +264,7 @@ if (isset($_POST["btnSubmit"])) {
             $thisDatabase->db->beginTransaction();
             $data = array($firstName,$lastName,$ProfilePic);
             $query = 'UPDATE tblPosts SET fldSubjectFirst="' . $data[0] . '", fldSubjectLast="' . $data[1] . '", fldSubjectPic="' . $data[2] . '" WHERE fnkSubjectDad LIKE "'.$_SESSION['userName'].'"';
-            print $query;
+            //print $query;
 
             //print $query;
             if ($debug) {
@@ -375,14 +375,14 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
         <br>
         <fieldset>
             <legend class="required">What activities do you enjoy?</legend>
-            <label><input type="checkbox" id="chkHiking" name="chkHiking" <?php if ($hiking == true) echo 'checked="checked"'; ?> value="Hiking"  class="option" tabindex="221" style="float:left"> Hiking</label><br>
-            <label><input type="checkbox" id="chkSailing" name="chkSailing" <?php if ($sailing == true) echo 'checked="checked"'; ?> value="Sailing" class="option" tabindex="222"  style="float:left"> Sailing</label><br>
-            <label><input type="checkbox" id="chkGrilling" name="chkGrilling" <?php if ($grilling == true) echo 'checked="checked"'; ?> value="Grilling" class="option" tabindex="223"  style="float:left"> Grilling</label><br>
-            <label><input type="checkbox" id="chkReading" name="chkReading" <?php if ($reading == true) echo 'checked="checked"'; ?> value="Reading" class="option" tabindex="224"  style="float:left"> Reading</label><br>
-            <label><input type="checkbox" id="chkTelevision" name="chkTelevision" <?php if ($television == true) echo 'checked="checked"'; ?> value="Television" class="option" tabindex="225"  style="float:left"> Watching the television</label><br>
-            <label><input type="checkbox" id="chkChillaxing" name="chkChillaxing" <?php if ($chillaxing == true) echo 'checked="checked"'; ?> value="Chillaxing" class="option" tabindex="226"  style="float:left"> Chillaxing</label><br>
-            <label><input type="checkbox" id="chkSkiing" name="chkSkiing" <?php if ($skiing == true) echo 'checked="checked"'; ?> value="Skiing" class="option" tabindex="227"  style="float:left"> Skiing</label><br>                 
-            <label><input type="checkbox" id="chkPigskin" name="chkPigskin" <?php if ($pigskin == true) echo 'checked="checked"'; ?> value="Pigskin" class="option" tabindex="227"  style="float:left"> Football</label><br>     
+            <label><input type="checkbox" id="chkHiking" name="chkHiking" <?php if ($hiking == true) echo 'checked="checked"'; ?> value="Hiking"  class="option" tabindex="262" style="float:left"> Hiking</label><br>
+            <label><input type="checkbox" id="chkSailing" name="chkSailing" <?php if ($sailing == true) echo 'checked="checked"'; ?> value="Sailing" class="option" tabindex="263"  style="float:left"> Sailing</label><br>
+            <label><input type="checkbox" id="chkGrilling" name="chkGrilling" <?php if ($grilling == true) echo 'checked="checked"'; ?> value="Grilling" class="option" tabindex="264"  style="float:left"> Grilling</label><br>
+            <label><input type="checkbox" id="chkReading" name="chkReading" <?php if ($reading == true) echo 'checked="checked"'; ?> value="Reading" class="option" tabindex="265"  style="float:left"> Reading</label><br>
+            <label><input type="checkbox" id="chkTelevision" name="chkTelevision" <?php if ($television == true) echo 'checked="checked"'; ?> value="Television" class="option" tabindex="266"  style="float:left"> Watching the television</label><br>
+            <label><input type="checkbox" id="chkChillaxing" name="chkChillaxing" <?php if ($chillaxing == true) echo 'checked="checked"'; ?> value="Chillaxing" class="option" tabindex="267"  style="float:left"> Chillaxing</label><br>
+            <label><input type="checkbox" id="chkSkiing" name="chkSkiing" <?php if ($skiing == true) echo 'checked="checked"'; ?> value="Skiing" class="option" tabindex="268"  style="float:left"> Skiing</label><br>                 
+            <label><input type="checkbox" id="chkPigskin" name="chkPigskin" <?php if ($pigskin == true) echo 'checked="checked"'; ?> value="Pigskin" class="option" tabindex="269"  style="float:left"> Football</label><br>     
 
 
         </fieldset>
@@ -391,7 +391,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
             <legend>What adjective best describes you?</legend>
             <label class="required">Choose one: 
             <br>
-            <select id="lstAdjective" name="lstAdjective" tabindex="283" size="1">
+            <select id="lstAdjective" name="lstAdjective" tabindex="270" size="1">
                 <option <?php if ($adjective == "neutral") echo ' selected="selected" '; ?> value="neutral">Neutral</option>
                 <option <?php if ($adjective == "calm") echo ' selected="selected" '; ?> value="calm" >Calm</option>
                 <option <?php if ($adjective == "quirky") echo ' selected="selected" '; ?> value="quirky">Quirky</option>
@@ -416,7 +416,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
         <fieldset>
             <legend>Did you move somewhere new?</legend>
             <label for="txtCity" >City: 
-            <input type="text" id="txtCity" name="txtCity" value="<?php echo $city; ?>" tabindex="261" class="option"
+            <input type="text" id="txtCity" name="txtCity" value="<?php echo $city; ?>" tabindex="310" class="option"
                    maxlength="12" onfocus="this.select()" placeholder="City here" style="width: 10em;"></label><br>
         </fieldset>
         <br>
@@ -432,7 +432,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
 
 
             <input type="reset" id="btnreset" name="btnReset" value="Reset" 
-                   tabindex="993" class="btnDad" style="margin-left:30px" >					
+                   tabindex="990" class="btnDad" style="margin-left:30px" >					
             <input type="submit" id="btnSubmit" name="btnSubmit" value="Update Profile" 
                    tabindex="991" class="btnDad" style="margin-left:30px">
         </fieldset>
