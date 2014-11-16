@@ -1,13 +1,4 @@
-<script type="text/javascript">
-    $(function() {
-        $('.like').click(function() {
-            $.get('like.php', function() {
 
-            });
-            return false;
-        });
-    });
-</script>
 <?php
 include 'top.php';
 
@@ -96,7 +87,7 @@ if (isset($_POST['btnAddDad'])) {
     $query = 'DELETE FROM tblFriends WHERE fnkSubjectDad LIKE "' . $data[0] . '" AND fnkTargetDad LIKE "' . $data[1] . '"';
     //print $query;
     $results = $thisDatabase->delete($query);
-    $query = 'INSERT INTO tblFriends(fnkSubjectDad,fnkTargetDad,fldTargetFirst,fldTargetLast,fldTargetPic) VALUES("' . $data[0] . '","' . $data[1] . '","' . $data[2] . '","' . $data[3] . '","' . $data [4] . '")';
+    $query = 'INSERT INTO tblFriends(fnkSubjectDad,fnkTargetDad,fldTargetFirst,fldTargetLast,fldTargetPic,fldNew) VALUES("' . $data[0] . '","' . $data[1] . '","' . $data[2] . '","' . $data[3] . '","' . $data [4] . '",1)';
     //print $query;
     $results = $thisDatabase->insert($query);
 }
@@ -111,13 +102,21 @@ if (isset($_POST['btnPost'])) {
         //$query = 'DELETE FROM tblPosts WHERE fnkSubjectDad LIKE "' . $data[0] . '" AND fnkTargetDad LIKE "' . $data[1] . '"';
         //print $query;
         //$results = $thisDatabase->delete($query);
-        $query = 'INSERT INTO tblPosts(fnkSubjectDad,fnkTargetDad,fldSubjectFirst,fldSubjectLast,fldSubjectPic,fldPostText) VALUES("' . $data[0] . '","' . $data[1] . '","' . $data[2] . '","' . $data[3] . '","' . $data [4] . '","' . $data [5] . '")';
+        $query = 'INSERT INTO tblPosts(fnkSubjectDad,fnkTargetDad,fldSubjectFirst,fldSubjectLast,fldSubjectPic,fldPostText,fldNew) VALUES("' . $data[0] . '","' . $data[1] . '","' . $data[2] . '","' . $data[3] . '","' . $data [4] . '","' . $data [5] . '",1)';
         //print $query;
         $results = $thisDatabase->insert($query);
         unset($_POST['txtPost']);
     }
 }
 
+$query = "SELECT fnkSubjectDad, fnkTargetDad,fldSubjectFirst,fldSubjectLast,fldSubjectPic,fldPostText,fldPostDate FROM tblPosts WHERE fnkTargetDad LIKE '" . $_SESSION['userName'] . "' AND fldNew = 1 AND fnkSubjectDad NOT LIKE '" . $_SESSION['userName'] . "' ORDER BY fldPostDate DESC";
+//print $query;
+    $postMessages = $thisDatabase->select($query);
+$query = "SELECT fldFirstName, fldLastName, fldPicName, fldUserName FROM tblFriends LEFT JOIN tblUsers ON fnkSubjectDad = fldUserName WHERE fnkTargetDad LIKE '" . $_SESSION['userName'] . "' AND fldNew = 1";
+//print $query;
+    $friendMessages = $thisDatabase->select($query);
+$notesNum =  count($friendMessages)+count($postMessages);
+    
 ?>
 
 <div id="wrapper">
@@ -125,14 +124,15 @@ if (isset($_POST['btnPost'])) {
     <section id="rightwrap">
         Dads you should meet:
         <ol>
-            <li><?php print "<a href='profile.php?user=" . $randDad[0]['fldUserName'] . "'><div style='width:90px;height:90px'><img src='images/" . $randDad [0]['fldPicName'] . "' alt='' style='max-height:90;max-width:90px'></div>"; ?><br><p><?php print "" . $randDad[0]['fldFirstName'] . " " . $randDad[0]['fldLastName'] . "</a>"; ?></p><br></li>
+            <li><?php print "<a href='profile.php?user=" . $randDad[0]['fldUserName'] . "'><div style='width:90px;height:90px'><img src='images/" . $randDad [0]['fldPicName'] . "' alt='' style='max-height:90px;max-width:90px'></div>"; ?><br><p><?php print "" . $randDad[0]['fldFirstName'] . " " . $randDad[0]['fldLastName'] . "</a>"; ?></p><br></li>
 
-            <li><?php print "<a href='profile.php?user=" . $randDad[1]['fldUserName'] . "'><div style='width:90px;height:90px'><img src='images/" . $randDad [1]['fldPicName'] . "' alt='' style='max-height:90;max-width:90px'></div>"; ?><br><p><?php print "" . $randDad[1]['fldFirstName'] . " " . $randDad[1]['fldLastName'] . "</a>"; ?></p><br></li>
+            <li><?php print "<a href='profile.php?user=" . $randDad[1]['fldUserName'] . "'><div style='width:90px;height:90px'><img src='images/" . $randDad [1]['fldPicName'] . "' alt='' style='max-height:90px;max-width:90px'></div>"; ?><br><p><?php print "" . $randDad[1]['fldFirstName'] . " " . $randDad[1]['fldLastName'] . "</a>"; ?></p><br></li>
 
-            <li><?php print "<a href='profile.php?user=" . $randDad[2]['fldUserName'] . "'><div style='width:90px;height:90px'><img src='images/" . $randDad [2]['fldPicName'] . "' alt='' style='max-height:90;max-width:90px'></div>"; ?><br><p><?php print "" . $randDad[2]['fldFirstName'] . " " . $randDad[2]['fldLastName'] . "</a>"; ?></p><br></li>
+            <li><?php print "<a href='profile.php?user=" . $randDad[2]['fldUserName'] . "'><div style='width:90px;height:90px'><img src='images/" . $randDad [2]['fldPicName'] . "' alt='' style='max-height:90px;max-width:90px'></div>"; ?><br><p><?php print "" . $randDad[2]['fldFirstName'] . " " . $randDad[2]['fldLastName'] . "</a>"; ?></p><br></li>
         </ol>
     </section>
     <section id="leftwrap">
+        <form method='get' action='search.php'>
         <ol>
             <li>
                 <div >
@@ -153,15 +153,19 @@ if (isset($_POST['btnPost'])) {
                 <br>
             </li>
             <li>
-                <p><a href='profile.php'>See your profile</a></p>
+                <p><a href='profile.php'>See your Profile</a></p>
             </li>
             <li>
-                <p><a href='edit.php'>Edit your profile</a></p>
+                <p><a href='edit.php'>Edit your Profile</a></p>
             </li>
             <li>
-                <form method='get' action='search.php'><input type='text' placeholder='Search for dads' id='txtDadSearch' name='txtDadSearch' required='required'><input type='submit' value='Search' name='btnSearch' id='btnSearch' class='btnDad' style='padding: 6px 6px 6px 6px;'></form>
+                <p><a href='profile.php?tab=notes'>See New Notes<?php if ($notesNum > 0) {print " (".$notesNum.")";} ?></a></p>
+            </li>
+            <li>
+                <input type='text' placeholder='Search for dads' id='txtDadSearch' name='txtDadSearch' required='required' style="width:200px"><input type='submit' value='Search' name='btnSearch' id='btnSearch' class='btnDad' style='padding: 6px 6px 6px 6px;margin-left:20px;'>
             </li>
         </ol>
+        </form>
     </section>
 
     <section id="main">
@@ -180,7 +184,7 @@ if (isset($_POST['btnPost'])) {
                 if (isset($_POST['btnAddDad'])) {
                     print 'You have successfully added this dad!';
                 } {
-                    print "<div><form method='post' action='" . $phpSelf . "?user=" . $userName . "'><input type='hidden' name='user' value='" . $_GET['user'] . "'><textarea name='txtPost' style='width:390px;float:right;height:100px;'></textarea><br><input type='submit' value='Post Message' name='btnPost' id='btnPost' style='margin:0;margin-left:240px;margin-top:15px;' class='btnDad'></form></div>";
+                    print "<div><form method='post' action='" . $phpSelf . "?user=" . $userName . "'><input type='hidden' name='user' value='" . $_GET['user'] . "'><textarea name='txtPost' style='width:380px;float:right;height:100px;'></textarea><br><input type='submit' value='Post Message' name='btnPost' id='btnPost' style='margin:0;margin-left:240px;margin-top:15px;' class='btnDad'></form></div>";
                 }
             }
             ?>
@@ -214,6 +218,8 @@ if (isset($_POST['btnPost'])) {
                 include 'info.php';
             } elseif ($_GET['tab'] == 'friends') {
                 include 'friends.php';
+            } elseif ($_GET['tab'] == 'notes') {
+                include 'notifications.php';
             }
             ?> 
     </section>

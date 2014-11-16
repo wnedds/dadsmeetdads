@@ -40,7 +40,7 @@
             ?></p>
         <h3 class='Profile'>About:</h3>
         <p><?php
-            print $firstName . " is a " . $gender . ' dad who considers himself to be ' . $adjective . '.';
+            print $firstName . " is a " . $adjective. " " . $gender . ' dad.';
             ?></p>
 
         <h3 class='Profile'><?php print $firstName ?>'s Pals:</h3>

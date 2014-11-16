@@ -25,15 +25,7 @@
             echo "<div class='messageContainer' style='float:left;border:2px #709fcf solid;width:480px;border-radius:2px;'>";
             echo "<p style='text-align:left;margin:10px;margin-bottom:0'>";
             echo "<strong>Posted by " . $onePost['fldSubjectFirst'] . " " . $onePost["fldSubjectLast"] . " on " . $finalPostTime . "</strong>";
-            echo "</p>";
-            echo "<p style='font-size:.9em;padding:10px;padding-top:0'>";
-            echo "<br>";
-            echo $onePost['fldPostText'];
-            echo "</p>";
-            echo "</div>";
-            echo "</div>";
-            echo "<br>";
-            echo "<br>";
+            echo "</p><p style='font-size:.9em;padding:10px;padding-top:0'><br>".$onePost['fldPostText']."</p></div></div><br><br>";
         }
     }
     ?>      

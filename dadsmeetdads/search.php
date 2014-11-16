@@ -11,6 +11,8 @@ print '<article>';
 $searchResults = $thisDatabase->select($query);
 //print_r($searchResults);
 print '<h1>Dads with names like "'.$_GET['txtDadSearch'].'":</h1><br>';
+
+
 if (empty($searchResults)) {
     print "<p style='text-align: center;'>It looks like there are no dads with that name.</p>";
 } else {
@@ -22,5 +24,6 @@ if (empty($searchResults)) {
     print '</div><br>';
 }
 }
+print "<h4 style='margin-bottom: 20px'>Don't see the dad you're looking for? Search again: </h4><form method='get' action='search.php'><input type='text' placeholder='Search for dads' id='txtDadSearch' name='txtDadSearch' required='required'><input type='submit' value='Search' name='btnSearch' id='btnSearch' class='btnDad' style='padding: 6px 6px 6px 6px;margin-left:20px'></form>";
 print '</article>';
 include 'footer.php';
