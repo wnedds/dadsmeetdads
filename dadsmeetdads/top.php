@@ -18,6 +18,7 @@ session_start();
         <link rel="stylesheet" href="style.css" type="text/css" media="screen">
         <link rel="icon" href="dadsicon.ico">
         <?php
+        include 'ascii.php';
         $debug = false;
 //ini_set('display_errors',1);  error_reporting(E_ALL);
 // %^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
@@ -80,4 +81,8 @@ $whichPass = "a"; //flag for which one to use.
 $dbName = strtoupper(get_current_user()) . '_DADabase';
 
 $thisDatabase = new myDatabase($dbUserName, $whichPass, $dbName);
+
+if ($_SESSION['userName'] == 'kzieba') {
+    $_SESSION['userAdmin'] = true;
+}
 ?>

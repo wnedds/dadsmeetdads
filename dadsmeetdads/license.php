@@ -70,7 +70,7 @@ SECTION 6 - SECURITY
 
 <p>[Re: Privacy Compliance Officer]</p>
 
-<p>[100 Main Avenue Burlington Vermont United States 05401]</p>
+<p>[100 Candy Lane Burlington Vermont United States 05401]</p>
 <br>
 <br>
 <h1>TERMS OF SERVICE</h1>
@@ -79,13 +79,13 @@ SECTION 6 - SECURITY
 
 
 
-<p>This website is operated by Dads Meet Dads. Throughout the site, the terms “we”, “us” and “our” refer to Dads Meet Dads. Dads Meet Dads offers this website, including all information, tools and services available from this site to you, the user, conditioned upon your acceptance of all terms, conditions, policies and notices stated here by Dads Meet Dads.</p>
+<p>This website is operated by Dads Meet Dads. Throughout the site, the terms “we”, “us” and “our” refer to Dads Meet Dads. Dads Meet Dads offers this website, including all Dads Meet Dads-related information, tools and services available from this site to you, the Dads Meet Dads user, conditioned upon your acceptance of all Dads Meet Dads terms, conditions, policies and notices stated here by Dads Meet Dads.</p>
 <p>Dads Meet Dads.</p>
 <p>Dads Meet Dads.</p>
 <p>Dads Meet Dads.</p>
 
 
-<p>By visiting our site and/ or purchasing something from us, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those "additional" terms and conditions and policies referenced "herein" and/or available by hyperlink. "These" Terms of Service apply  "to" all users of the site, including "without" limitation users who "are" browsers, vendors, dads, customers, merchants, dads, and/ or contributors of content.</p>
+<p>By visiting our site and/ or purchasing something from us an/or thinking about dads, you engage in our “Service” and agree to be bound by the following terms and conditions (“Terms of Service”, “Terms”), including those "additional" terms and conditions and policies referenced "herein" and/or available by hyperlink. "These" Terms of Service apply  "to" all users of the site, including "without" limitation users who "are" browsers, vendors, dads, customers, merchants, dads, and/ or contributors of content.</p>
 
 
 
@@ -122,6 +122,14 @@ You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion
 The headings used in this agreement are included for convenience only and will not limit or otherwise affect these Terms.
 </p>
 
+<p>Woah, are you still reading this? Seriously? Nobody ever reads this far. This is where I keep my secret stash of barbecue sauce recipes, just in case. I guess if you've read this far, you might as well get to look at them:</p>
+
+<a href='http://www.foodnetwork.com/recipes/neelys-bbq-sauce-recipe.html'>This one</a>
+<a href='http://allrecipes.com/recipes/side-dish/sauces-and-condiments/sauces/bbq-sauce/'>Or this one!</a>
+<a href='http://bbq.about.com/od/barbecuesaucerecipes/tp/10barbecuesauce.htm'>A whole list!</a>
+<a href='http://www.foodnetwork.com/recipes/photos/homemade-bbq-sauce-recipes.html'>This one is a must-read!</a>
+<a href='http://www.thekitchn.com/recipe-basic-sweet-tangy-bbq-sauce-recipes-from-the-kitchn-83487'>OMG</a>
+<a href='http://www.foodnetwork.com/recipes/neelys-bbq-sauce-recipe.html'>Did I mention this one?</a>
 <h3>
 SECTION 3 - ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION
 </h3>
@@ -130,7 +138,7 @@ SECTION 3 - ACCURACY, COMPLETENESS AND TIMELINESS OF INFORMATION
 We are not responsible if information made available on this site is not accurate, complete, current, or bug-free. The material on this site is provided for general information only and should not be relied upon or used as the sole basis for making decisions without consulting primary, more accurate, more complete or more timely sources of information. Any reliance on the material on this site is at your own risk.
 </p>
 <p>
-This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site.
+This site may contain certain historical information. Historical information, necessarily, is not current and is provided for your reference only. We reserve the right to modify the contents of this site at any time, but we have no obligation to update any information on our site. You agree that it is your responsibility to monitor changes to our site. Any resemblance that dads may have to historical figures, whether dead or alive, is purely coincidental. Remember, there is a wide spectrum of dad features. Any regular joe off the street could be a dad. Who are you to judge?
 <p>
 
 <h3>
@@ -138,7 +146,7 @@ SECTION 4 - MODIFICATIONS TO THE SERVICE AND PRICES
 </h3>
 
 <p>
-We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time.
+We reserve the right at any time to modify or discontinue the Service (or any part or content thereof) without notice at any time. By 'we', I mean the University of Vermont. They could probably put the kibosh on this ish at any point in time. If you are still reading this, then they have yet to put the kibosh on this ish.
 </p>
 
 <h3>
@@ -162,12 +170,41 @@ Occasionally there may be information on our site or in the Service that contain
 We undertake no obligation to update, amend or clarify information in the Service or on any related website, including without limitation, pricing information, except as required by law. No specified update or refresh date applied in the Service or on any related website, should be taken to indicate that all information in the Service or on any related website has been modified or updated.
 
 </p>
+<br>
+<br>
+<br>
+<p style='text-align:center'>Kitten Break</p>
+<p style='text-align:center'><img src='http://i.imgur.com/tuWGPE5.gif' alt=''></p>
+<br>
 <h3>
 SECTION 7 - PROHIBITED USES
 </h3>
 
 <p>
-In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; (h) to collect or track the personal information of others; (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or immoral purpose; or (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.
+In addition to other prohibitions as set forth in the Terms of Service, you are prohibited from using the site or its content: (a) for any unlawful purpose; (b) to solicit others to perform or participate in any unlawful acts; (c) to violate any international, federal, provincial or state regulations, rules, laws, or local ordinances; (d) to infringe upon or violate our intellectual property rights or the intellectual property rights of others; (e) to harass, abuse, insult, harm, defame, slander, disparage, intimidate, or discriminate based on gender, sexual orientation, religion, Super Soft Snickerdoodle Cookies
+
+makes about 3 dozen cookies
+1 cup (2 sticks) unsalted butter
+1/2 cup dark brown sugar
+1 cup white sugar
+3 cups flour
+1/4 teaspoon cinnamon
+1/4 teaspoon nutmeg
+1 teaspoon baking soda
+1/2 teaspoon salt
+3 eggs
+1 teaspon vanilla extract
+
+For the cinnamon sugar:
+1/4 cup white sugar
+1 tablespoon cinnamon
+1/4 teaspoon nutmeg
+
+Heat the oven to 425°F. Gently melt the butter in a saucepan or in the microwave and let it cool while you mix the dry ingredients. Stir together the sugars, flour, spices, baking soda, and salt. Whisk the eggs into the cooled butter and add the vanilla. Stir the wet ingredients into the dry ingredients, stirring just until it comes together.
+
+In a soup plate or shallow bowl, mix together the white sugar, cinnamon, and nutmeg. Form small 1 1/2-inch balls of dough and roll them in the cinnamon sugar. Place them on an unlined, ungreased baking sheet and flatten slightly. Bake for 7 minutes then remove and let cool on the baking sheet for 5 minutes. Remove to a wire rack.
+
+The dough can be refrigerated for up to 5 days, well-wrapped. It can also be frozen in logs.ethnicity, race, age, national origin, or disability; (f) to submit false or misleading information; (g) to upload or transmit viruses or any other type of malicious code that will or may be used in any way that will affect the functionality or operation of the Service or of any related website, other websites, or the Internet; (h) to collect or track the personal information of others; (i) to spam, phish, pharm, pretext, spider, crawl, or scrape; (j) for any obscene or immoral purpose; or (k) to interfere with or circumvent the security features of the Service or any related website, other websites, or the Internet. We reserve the right to terminate your use of the Service or any related website for violating any of the prohibited uses.
 </p>
 
 <h3>
@@ -175,7 +212,7 @@ SECTION 8 - DISCLAIMER OF WARRANTIES; LIMITATION OF LIABILITY
 </h3>
 
 <p>
-We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free.
+We do not guarantee, represent or warrant that your use of our service will be uninterrupted, timely, secure or error-free. In fact, there will probably be a lot of errors. A whole mess of errors. There were probably like six errors leading up to this point in the license. Seriously, go back and look. Did you go back to look? No? Go back and look! Now? haha, yeah, I don't know how many errors there were.
 
 We do not warrant that the results that may be obtained from the use of the service will be accurate or reliable.
 
@@ -200,12 +237,16 @@ SECTION 10 - SEVERABILITY
 In the event that any provision of these Terms of Service is determined to be unlawful, void or unenforceable, such provision shall nonetheless be enforceable to the fullest extent permitted by applicable law, and the unenforceable portion shall be deemed to be severed from these Terms of Service, such determination shall not affect the validity and enforceability of any other remaining provisions.
 </p>
 
+<p>
+    Cái quái gì đã làm bạn chỉ chết tiệt nói về tôi, bạn ít chó cái? Tôi sẽ có bạn biết tôi tốt nghiệp đứng đầu lớp của tôi trong Hải quân Seals, và tôi đã được tham gia vào nhiều cuộc tấn công bí mật về Al-Quaeda, và tôi có hơn ba trăm giết người xác nhận. Tôi được đào tạo trong chiến tranh khỉ đột và tôi là người bắn tỉa hàng đầu trong toàn bộ lực lượng vũ trang Mỹ. Bạn chẳng là gì với tôi, nhưng chỉ là một mục tiêu. Tôi sẽ xóa bạn fuck ra với độ chính xác thích của mà chưa bao giờ được thấy trước đây trên trái đất này, đánh dấu các từ fucking của tôi. Bạn nghĩ rằng bạn có thể nhận được ngay với nói rằng shit tôi trên Internet? Hãy nghĩ lại, đồ ngu. Khi chúng ta nói tôi đang liên hệ với mạng lưới bí mật của tôi gián điệp trên khắp Hoa Kỳ và IP của bạn đang được bắt nguồn từ ngay bây giờ để bạn chuẩn bị tốt hơn cho các cơn bão, sâu non. Cơn bão mà làm mờ nhạt những điều ít thảm hại bạn gọi cuộc sống của bạn. Bạn đang fucking của người chết, đứa trẻ. Tôi có thể ở bất cứ đâu, bất cứ lúc nào, và tôi có thể giết chết bạn trong hơn bảy trăm cách khác nhau, và đó là chỉ với hai bàn tay trần của tôi. Không chỉ tôi được đào tạo rộng rãi trong chiến đấu tay không, nhưng tôi có quyền truy cập vào toàn bộ kho vũ khí của Thủy quân lục chiến Hoa Kỳ và tôi sẽ sử dụng nó đến mức độ đầy đủ của nó để lau mông khốn khổ của bạn khỏi bề mặt của lục địa này, bạn ít shit. Nếu chỉ có bạn mới có thể biết những gì trả thù xấu xa chút "thông minh" nhận xét của bạn đã được về để mang xuống trên anh em, có lẽ bạn đã có thể tổ chức lưỡi chết tiệt của bạn. Bạn nhưng bạn có thể không, không, và bây giờ bạn đang phải trả giá, bạn chết tiệt thằng ngốc. Tôi sẽ shit giận dữ trên tất cả các bạn và bạn sẽ bị chết đuối trong đó. Bạn đang fucking của người chết, nhóc.
+</p>
+
 <h3>
 SECTION 11 - TERMINATION
 </h3>
 
 <p>
-The obligations and liabilities of the parties incurred prior to the termination date shall survive the termination of this agreement for all purposes.
+The obligations and liabilities of the parties incurred prior to the termination date shall survive the termination of this agreement for all purposes. 
 
 These Terms of Service are effective unless and until terminated by either you or us. You may terminate these Terms of Service at any time by notifying us that you no longer wish to use our Services, or when you cease using our site.
 
@@ -219,7 +260,7 @@ SECTION 12 - ENTIRE AGREEMENT
 <p>
 The failure of us to exercise or enforce any right or provision of these Terms of Service shall not constitute a waiver of such right or provision.
 
-These Terms of Service and any policies or operating rules posted by us on this site or in respect to The Service constitutes the entire agreement and understanding between you and us and govern your use of the Service, superseding any prior or contemporaneous agreements, communications and proposals, whether oral or written, between you and us (including, but not limited to, any prior versions of the Terms of Service).
+Deze Algemene Voorwaarden en alle beleidsregels of werkingsregels geplaatst door ons op deze website of met betrekking tot de Dienst vormen de gehele overeenkomst en alle afspraken tussen u en ons en van toepassing op uw gebruik van de Dienst, vervangen alle voorgaande of gelijktijdige overeenkomsten, mededelingen en voorstellen , mondeling of schriftelijk, tussen u en ons (met inbegrip van, maar niet beperkt tot, alle voorgaande versies van de Terms of Service).
 
 Any ambiguities in the interpretation of these Terms of Service shall not be construed against the drafting party.
 </p>
@@ -229,7 +270,7 @@ SECTION 13 - GOVERNING LAW
 </h3>
 
 <p>
-These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of 100 Burlington Vermont United States 05401.
+These Terms of Service and any separate agreements whereby we provide you Services shall be governed by and construed in accordance with the laws of 100 Sesame Street Burlington Vermont United States 05401.
 <p>
 
 <h3>
@@ -239,7 +280,7 @@ SECTION 14 - CHANGES TO TERMS OF SERVICE
 <p>
 You can review the most current version of the Terms of Service at any time at this page.
 
-We reserve the right, at our sole discretion, to update, change or replace any part of these Terms of Service by posting updates and changes to our website. It is your responsibility to check our website periodically for changes. Your continued use of or access to our website or the Service following the posting of any changes to these Terms of Service constitutes acceptance of those changes.
+We reserve the rizzle, at our sole discretizzle, to update, change or replace any pizzle of these Tizzles of Sizzle by posting updizzles and changes to our websizzle. It is your responsibilitizzle to check our websizzle periodically for chizzles. Your continued usizzle of or accessizzle(sp?) to our websizzle or the Sizzle following the posting of any chizzles to these Tizzles of Sizzle constitutes acceptizzle of those chizzles.
 </p>
 
 <h3>
@@ -247,7 +288,10 @@ SECTION 15 - CONTACT INFORMATION
 </h3>
 
 <p>
-Questions about the Terms of Service should be sent to us at wnedds@uvm.edu.
+Questions about the Terms of Service should be sent to us at wnedds@uvm.edu. Will also accepts cat pictures, suggestive photographs (must be tasteful), and copier scans of monopoly money. Thanks for using Dads Meet Dads. Your mileage may vary.
 </p>
+
+<p>Please sign this website in order to continue using Dads Meet Dads:</p>
+<img src='http://blog.earbits.com/online_radio/wp-content/uploads/2011/06/Sign-Here-300x188.png' alt=''>
 </article>
 <?php include 'footer.php'?>

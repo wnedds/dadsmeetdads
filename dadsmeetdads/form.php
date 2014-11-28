@@ -336,14 +336,13 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {  // closing of if marked 
 
     echo "been created! Welcome to Dads Meet Dads!</h1>";
 
+    
+    print "<p>Hold your horses there, sport! You have to sign up before you can be a part of the Dads Meet Dads community. Why, if anyone could just go around and visit whatever page they like, the internet would be even more dangerous than it is now! You'll need to confirm your account first so that we can be sure you're really one of us dads, at which point you can start building ships-n-a-bottle and filing your tax returns with other equally cool dads! Check your email for updates and confirm your email to begin!</p>";
     print "<p>You will ";
     if (!$mailed) {
         echo "not ";
     }
-    print "receive a message at </p>";
-    print "<p>To: " . $email . "</p>";
-    print "<p>Mail Message:</p>";
-    print $messageA . $messageC;
+    print "receive a message at ". $email . "</p>";
     print "</aside>";
 
 
