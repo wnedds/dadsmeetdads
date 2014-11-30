@@ -1,9 +1,9 @@
 <?php
 include 'top.php';
 
-if ($_SESSION['userName'] != 'wnedds') {
-    header('Location: profile.php?block=true');
-}
+//if ($_SESSION['userName'] != 'wnedds') {
+//    header('Location: profile.php?block=true');
+//}
 
 $email = '';
 

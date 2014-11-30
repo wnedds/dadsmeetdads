@@ -92,7 +92,7 @@ if (isset($_POST["btnSubmit"])) {
     if (isset($_POST["chkChillaxing"])) {
         $chillaxing = true;
     } else {
-        $Chillaxing = false;
+        $chillaxing = false;
     }
     if (isset($_POST["chkSkiing"])) {
         $skiing = true;

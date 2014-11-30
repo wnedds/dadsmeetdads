@@ -20,7 +20,7 @@ session_start();
         <?php
         include 'ascii.php';
         $debug = false;
-//ini_set('display_errors',1);  error_reporting(E_ALL);
+ini_set('display_errors',1);  error_reporting(E_ALL);
 // %^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%^%
 //
 // PATH SETUP

@@ -10,9 +10,9 @@ $query = "SELECT fnkSubjectDad, fnkTargetDad,fldTargetFirst,fldTargetLast,fldTar
 $numFriends = $thisDatabase->select($query);
 //print_r($numFriends);
 
-if (isset($_GET['block'])) {
-    print '<p style="text-align:center;color:red;padding:20px;background-color:white">Sorry, dad, but only administrators can use this function at this time.</p>';
-}
+//if (isset($_GET['block'])) {
+//    print '<p style="text-align:center;color:red;padding:20px;background-color:white">Sorry, dad, but only administrators can use this function at this time.</p>';
+//}
 
 foreach ($numFriends as $oneFriends) {
     if ($_GET['user'] == $oneFriends['fnkTargetDad']) {
@@ -161,6 +161,13 @@ $notesNum =  count($friendMessages)+count($postMessages);
             <li>
                 <p><a href='profile.php?tab=notes'>See New Notes<?php if ($notesNum > 0) {print " (".$notesNum.")";} ?></a></p>
             </li>
+            <?php
+                if ($_SESSION['userAdmin'] == true) {
+                echo '<li>';
+                echo "<p><a href='console.php'>Admin Console";
+                echo '</a></p></li>';
+            }
+            ?>
             <li>
                 <input type='text' placeholder='Search for dads' id='txtDadSearch' name='txtDadSearch' required='required' style="width:200px"><input type='submit' value='Search' name='btnSearch' id='btnSearch' class='btnDad' style='padding: 6px 6px 6px 6px;margin-left:20px;'>
             </li>

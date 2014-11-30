@@ -66,12 +66,6 @@ if (isset($_POST["btnSubmit"])) {
     $bio = htmlentities($_POST["txtBio"], ENT_QUOTES, "UTF-8");
     $city = htmlentities($_POST["txtCity"], ENT_QUOTES, "UTF-8");
 
-    //$checkArray = array($ProfilePic, $firstName,$lastName,$password,$passwordCheck,$gender,$adjective,$bio,$city);
-    //foreach ($checkArray as $oneCheck) {
-    //if ($oneCheck[] == '') {
-    //}
-    //}
-
 
     if (isset($_POST["chkHiking"])) {
         $hiking = true;
@@ -101,7 +95,7 @@ if (isset($_POST["btnSubmit"])) {
     if (isset($_POST["chkChillaxing"])) {
         $chillaxing = true;
     } else {
-        $Chillaxing = false;
+        $chillaxing = false;
     }
     if (isset($_POST["chkSkiing"])) {
         $skiing = true;

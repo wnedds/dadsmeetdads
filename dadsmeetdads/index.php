@@ -30,6 +30,9 @@ if (isset($_POST['btnLogin'])) {
         $_SESSION['firstName'] = $results[0]['fldFirstName'];
         $_SESSION['lastName'] = $results[0]['fldLastName'];
         $_SESSION['profilePic'] = $results[0]['fldPicName'];
+        if ($_SESSION['userName'] == 'kzieba' or $_SESSION['userName'] == 'wnedds') {
+            $_SESSION['userAdmin'] = true;
+        }
         header('Location:profile.php');
     } else {
         print '<p style="text-align:center;color:red;padding:20px;background-color:white">It looks like you entered the wrong username or password.</p>';
